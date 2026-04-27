@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚌 BusTrackr
+# 🚌 Trakio
 ### Real-Time School Bus Tracking System
 
 A full-stack platform that empowers parents, schools, and drivers with live GPS tracking, smart notifications, and role-based dashboards — keeping every child's commute safe and transparent.
