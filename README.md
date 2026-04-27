@@ -11,7 +11,7 @@ A full-stack platform that empowers parents, schools, and drivers with live GPS 
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-4.x-010101?style=flat-square&logo=socket.io)](https://socket.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Features](#-features) · [Tech Stack](#️-tech-stack) · [Getting Started](#-getting-started) · [Project Structure](#-project-structure) · [API Docs](#-api-overview) · [Contributing](#-contributing)
+[Features](#-features) · [Tech Stack](#️-tech-stack) ·
 
 </div>
 
