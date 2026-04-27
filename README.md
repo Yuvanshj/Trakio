@@ -19,13 +19,13 @@ A full-stack platform that empowers parents, schools, and drivers with live GPS 
 
 ## 📌 Problem Statement
 
-Parents often face uncertainty about their child's commute — whether the bus has arrived, if the child has boarded, or when they'll reach home. Schools also lack efficient systems to monitor transport operations in real time.
+Parents often face uncertainty about their child's commute whether the bus has arrived, if the child has boarded, or when they'll reach home. Schools also lack efficient systems to monitor transport operations in real time.
 
 **BusTrackr** solves this by providing a unified platform for live tracking, instant alerts, and complete operational control.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
@@ -40,7 +40,7 @@ Parents often face uncertainty about their child's commute — whether the bus h
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **[React 18](https://reactjs.org/)** + **[Vite](https://vitejs.dev/)** — Fast, modern UI framework
