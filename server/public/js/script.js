@@ -6,10 +6,9 @@ if(navigator.geolocation){
         socket.emit("sendLocation", {latitude, longitude})
     }, (error)=>{
         console.log(error)
-        socket.emit("sendLocation", {latitude: 19.075984, longitude: 72.877656})
       },
       {enableHighAccuracy:false,
-        timeout: 10000,
+        timeout: 5000,
         maximumAge:0
       }
     
