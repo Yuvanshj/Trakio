@@ -8,18 +8,18 @@ export default function TeamMemberCard({
         group
         relative
         overflow-hidden
-        rounded-[30px]
+        rounded-[25px]
         cursor-pointer
         transition-all
         duration-500
 
-        w-[320px]
-        h-[500px]
+        w-[420px]
+        h-150
 
         ${
           index === 1
-            ? "md:-translate-y-10"
-            : "md:translate-y-10"
+            ? "md:translate-y-30"
+            : "md:translate-y-30"
         }
       `}
     >
@@ -41,7 +41,7 @@ export default function TeamMemberCard({
         className="
           absolute
           inset-0
-          bg-gradient-to-t
+          bg-linear-to-t
           from-black/80
           via-black/20
           to-transparent

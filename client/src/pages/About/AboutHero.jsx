@@ -51,7 +51,7 @@ export default function AboutHero() {
           justify-center
           items-center
           gap-8
-          px-6
+          px-3
         "
       >
         {members.map((member, index) => (
