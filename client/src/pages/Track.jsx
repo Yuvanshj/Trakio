@@ -26,7 +26,7 @@ const Track = () => {
 
             right-0
 
-            w-[430px]
+            w-107.5
 
             h-screen
 
@@ -36,7 +36,7 @@ const Track = () => {
 
             border-l
 
-            border-white/[0.06]
+            border-white/6
 
             backdrop-blur-xl
 
