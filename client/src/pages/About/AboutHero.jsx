@@ -1,4 +1,7 @@
 import TeamMemberCard from "./TeamMemberCard";
+import Yuvi from "../../assets/Images/Yuvi.png";
+import Yash from "../../assets/Images/Yash.jpeg";
+import Alien from "../../assets/Images/alien.png";
 
 import { useState } from "react";
 
@@ -11,21 +14,21 @@ export default function AboutHero() {
       id: 1,
       name: "Yashaswi Gusain",
       role: "Talwinder God",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      image: Yash,
       about: "Passionate about crafting immersive frontend experiences and modern UI systems.",
     },
     {
       id: 2,
       name: "Shresth Juyal",
       role: "Auth God",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },
     {
       id: 3,
       name: "Yuvansh Juneja",
       role: "Map God",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      image: Yuvi,
       about:"Designs elegant user experiences with strong attention to detail and storytelling.",
     }
   ]
@@ -37,7 +40,7 @@ export default function AboutHero() {
 
       <h1 className="bg-text absolute top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[70px] sm:text-[140px] md:text-[270px] scale-x-120 text-center">THE TRAKIO</h1>
 
-      <h1 className="bg-text absolute top-100 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[70px] sm:text-[140px] md:text-[210px] scale-x-120 text-center">TRACKING APP</h1>
+      <h1 className="bg-text absolute top-[400px] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[70px] sm:text-[140px] md:text-[210px] scale-x-120 text-center">TRACKING APP</h1>
 
       <div className="hero-content relative z-10 text-center">
 
