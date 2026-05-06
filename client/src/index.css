@@ -10,7 +10,11 @@
 
   width: max-content;
 
-  animation: scroll 15s linear infinite;
+  animation: scroll 70s linear infinite;
+}
+
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -22,5 +26,8 @@
   to {
     transform: translateX(-50%);
   }
+}
 
+.reverse .marquee-content {
+  animation-direction: reverse;
 }
