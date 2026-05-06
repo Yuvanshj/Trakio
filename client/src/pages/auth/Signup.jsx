@@ -1,7 +1,7 @@
 import { Home } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { supabase } from "../../lib/supabase";
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,34 +11,62 @@ export default function Signup() {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setNameError("");
-    setEmailError("");
-    setPasswordError("");
-    
-    let isValid = true;
-    
-    if (name.trim().length < 2) {
-      setNameError("Enter a valid name");
-      isValid = false;
-    }
-    
-    if (!email.includes("@") || !email.includes(".com")) {
-      setEmailError("Enter correct email");
-      isValid = false;
-    }
-    
-        if (password.length < 8) {
-      setPasswordError("Enter correct password length");
-      isValid = false;
-    }
-    
-    if (isValid) {
-      navigate("/");
-    }
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  setNameError("");
+  setEmailError("");
+  setPasswordError("");
+
+  let isValid = true;
+
+  // Name validation
+  if (name.trim().length < 2) {
+    setNameError("Enter a valid name");
+    isValid = false;
+  }
+
+  // Official email validation
+  if (
+    !email.endsWith("@nst.rishihood.edu.in")
+  ) {
+    setEmailError(
+      "Only official college emails allowed"
+    );
+    isValid = false;
+  }
+
+  // Password validation
+  if (password.length < 8) {
+    setPasswordError(
+      "Password must be at least 8 characters"
+    );
+    isValid = false;
+  }
+
+  // Stop if validation fails
+  if (!isValid) {
+    return;
+  }
+
+  // Supabase signup
+  const { data, error } =
+    await supabase.auth.signUp({
+      email,
+      password,
+    });
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("Signup successful!");
+
+  console.log(data);
+
+  navigate("/login");
+};
   return (
     <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
     
@@ -115,6 +143,7 @@ export default function Signup() {
             text-[#18181B] font-semibold shadow-sm hover:shadow-md
             hover:from-[#EDEDED] hover:to-[#D4D4D8] 
             active:scale-95 transition-all duration-200 ease-out"
+        
           >
             Sign Up
           </button>
@@ -144,6 +173,7 @@ export default function Signup() {
           <Link
             to="/login"
             className="text-gray-300 hover:text-white transition-colors duration-200"
+
           >
             Login
           </Link>

@@ -1,7 +1,7 @@
 import { Home } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { supabase } from "../../lib/supabase";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -9,27 +9,51 @@ export default function Login() {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setEmailError("");
-    setPasswordError("");
-    
-    let isValid = true;
-    
-    if (!email.includes("@") || !email.includes(".com")) {
-      setEmailError("Enter correct email");
-      isValid = false;
-    }
-    
-    if (password.length < 8) {
-      setPasswordError("Enter correct password length");
-      isValid = false;
-    }
-      if (isValid) {
-      navigate("/");
-    }
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  setEmailError("");
+  setPasswordError("");
+
+  let isValid = true;
+
+  if (
+    !email.endsWith("@nst.rishihood.edu.in")
+  ) {
+    setEmailError(
+      "Only official college emails allowed"
+    );
+    isValid = false;
+  }
+
+  if (password.length < 8) {
+    setPasswordError(
+      "Password must be at least 8 characters"
+    );
+    isValid = false;
+  }
+
+  if (!isValid) {
+    return;
+  }
+
+  const { data, error } =
+    await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("Login successful!");
+
+  console.log(data);
+
+  navigate("/");
+};
   return (
     <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
 
