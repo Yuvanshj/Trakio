@@ -31,18 +31,9 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-950 text-white font-sans relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute -top-20 -right-20 w-56 h-56 rounded-full 
-          bg-linear-to-r from-gray-500/10 via-gray-400/10 to-gray-300/10 
-          blur-3xl opacity-40"></div>
+    <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
 
-        <div className="absolute -bottom-20 -left-20 w-56 h-56 rounded-full 
-          bg-linear-to-r from-gray-500/10 via-gray-400/10 to-gray-300/10 
-          blur-3xl opacity-40"></div>
-      </div>
-
-      <div className="relative w-full max-w-md rounded-xl bg-zinc-900 p-8 shadow-2xl border border-zinc-800 backdrop-blur-md">
+      <div className="relative w-full max-w-md rounded-xl bg-zinc-900 p-8 shadow-2xl border border-red-800 backdrop-blur-md">
         
         <Link
           to="/"
