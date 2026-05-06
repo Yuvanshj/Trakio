@@ -11,7 +11,6 @@ if(navigator.geolocation){
         timeout: 5000,
         maximumAge:0
       }
-    
     )
 }
 
