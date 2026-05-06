@@ -50,7 +50,7 @@ export default function Login() {
 
   console.log(data);
 
-  navigate("/");
+  navigate("/track");
 };
   return (
     <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
