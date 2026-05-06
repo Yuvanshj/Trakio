@@ -1,0 +1,29 @@
+.about-page{
+  background: #f5f5f5;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero{
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-text{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 220px;
+  font-weight: 900;
+  letter-spacing: -10px;
+  color: rgba(0,0,0,0.03);
+  white-space: nowrap;
+  z-index: 1;
+  user-select: none;
+}
