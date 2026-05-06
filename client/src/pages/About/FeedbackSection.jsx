@@ -46,6 +46,10 @@ export default function FeedbackSection() {
           Feedback
         </p>
 
+        <h1 className="bg-text absolute top-350 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[70px] sm:text-[140px] md:text-[270px] scale-x-120 text-center">THE TRAKIO</h1>
+
+        <h1 className="bg-text absolute top-410 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[70px] sm:text-[140px] md:text-[210px] scale-x-120 text-center">TRACKING APP</h1>
+
         <h2
           className="
             text-white
@@ -64,15 +68,11 @@ export default function FeedbackSection() {
 
       </div>
 
-      <div
-        className="
-          flex
-          gap-6
-          px-6
-        "
-      >
+      <div className="marquee">
 
-        {testimonials.map((item, index) => (
+        <div className="marquee-content">
+
+        {[...testimonials, ...testimonials].map((item, index) => (
 
           <div
             key={index}
@@ -110,6 +110,8 @@ export default function FeedbackSection() {
         ))}
 
       </div>
+
+</div>
 
     </section>
   );
