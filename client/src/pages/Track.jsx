@@ -1,8 +1,8 @@
 import {
-  FaCheckCircle,
-  FaExclamationTriangle,
-  FaRoute,
-  FaUser,
+  FaCircle,
+  FaMapMarkerAlt,
+  FaSchool,
+  FaUserGraduate,
 } from "react-icons/fa";
 
 const Track = () => {
@@ -12,296 +12,514 @@ const Track = () => {
       <iframe
         src="http://localhost:4000"
         title="Trakio Map"
-        className="absolute inset-0 w-full h-full border-0 z-0"
+        className="absolute inset-0 w-full h-full border-0"
         allow="geolocation"
       />
 
+      <div className="absolute inset-0 bg-black/10" />
+
       <div
         className="
-          absolute
-          top-0
-          right-0
-          h-screen
-          w-[400px]
+           absolute
 
-          z-30
+    top-0
 
-          bg-[#0d0d0d]/80
-          backdrop-blur-xl
+    right-0
 
-          border-l
-          border-white/10
+    w-[430px]
 
-          text-white
+    h-screen
 
-          overflow-hidden
+    overflow-y-auto
+
+    bg-[#0b0b0b]/98
+
+    border-l
+
+    border-white/[0.06]
+
+    backdrop-blur-xl
+
+    text-white
+
+    p-6
+
+    z-30
         "
       >
 
-        <div className="h-full overflow-y-auto px-5 py-5">
+        <div className="flex items-start justify-between">
 
-          <div className="flex items-center justify-between mb-7">
+          <div>
 
-            <h2 className="text-sm tracking-[2px] text-white/40 font-medium">
-              CHILDREN
-            </h2>
+            <p className="text-white/30 text-xs tracking-[3px] uppercase">
+              Student Tracking
+            </p>
 
-            <button
+            <h1
               className="
-                px-3
-                py-1.5
+                mt-3
 
-                rounded-lg
+                text-[42px]
 
-                bg-white/10
+                leading-[0.95]
 
-                text-sm
-                text-white/80
+                tracking-[-2px]
 
-                hover:bg-white/15
-
-                transition-all
+                font-light
               "
             >
-              + Add
-            </button>
+              Aryan Sharma
+            </h1>
+
+            <p className="mt-3 text-white/35 text-[15px]">
+              Route 12 • Delhi Public School
+            </p>
 
           </div>
 
-          <div className="space-y-4">
+          <div
+            className="
+              flex
+              items-center
+              gap-2
+
+              px-4
+              py-2
+
+              rounded-full
+
+              bg-red-500/10
+
+              text-red-400
+
+              text-sm
+            "
+          >
+            <FaCircle className="text-[8px]" />
+            Live
+          </div>
+
+        </div>
+
+        <div className="grid grid-cols-3 gap-3 mt-8">
+
+          <div
+            className="
+              bg-white/[0.04]
+
+              border
+              border-white/[0.05]
+
+              rounded-[24px]
+
+              p-4
+            "
+          >
+
+            <p className="text-white/30 text-sm">
+              ETA
+            </p>
+
+            <h3
+              className="
+                mt-4
+
+                text-[34px]
+
+                font-light
+
+                tracking-[-2px]
+              "
+            >
+              12m
+            </h3>
+
+            <p className="mt-2 text-white/25 text-sm">
+              To home stop
+            </p>
+
+          </div>
+
+          <div
+            className="
+              bg-white/[0.04]
+
+              border
+              border-white/[0.05]
+
+              rounded-[24px]
+
+              p-4
+            "
+          >
+
+            <p className="text-white/30 text-sm">
+              Speed
+            </p>
+
+            <h3
+              className="
+                mt-4
+
+                text-[34px]
+
+                font-light
+
+                tracking-[-2px]
+              "
+            >
+              42
+            </h3>
+
+            <p className="mt-2 text-white/25 text-sm">
+              km/h average
+            </p>
+
+          </div>
+
+          <div
+            className="
+              bg-white/[0.04]
+
+              border
+              border-white/[0.05]
+
+              rounded-[24px]
+
+              p-4
+            "
+          >
+
+            <p className="text-white/30 text-sm">
+              Distance
+            </p>
+
+            <h3
+              className="
+                mt-4
+
+                text-[34px]
+
+                font-light
+
+                tracking-[-2px]
+              "
+            >
+              5.4
+            </h3>
+
+            <p className="mt-2 text-white/25 text-sm">
+              km remaining
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className="mt-10">
+
+          <div className="flex items-center justify-between">
+
+            <h2
+              className="
+                text-[24px]
+
+                font-light
+
+                tracking-[-1px]
+              "
+            >
+              Route Progress
+            </h2>
+
+            <p className="text-white/25 text-sm">
+              Updated 2m ago
+            </p>
+
+          </div>
+
+          <div
+            className="
+              mt-6
+
+              h-[220px]
+
+              rounded-[28px]
+
+              bg-white/[0.03]
+
+              border
+              border-white/[0.05]
+
+              p-5
+
+              relative
+
+              overflow-hidden
+            "
+          >
+
+            <div className="absolute inset-0 opacity-40">
+
+              <div className="absolute left-0 right-0 top-[20%] border-t border-white/[0.04]" />
+              <div className="absolute left-0 right-0 top-[40%] border-t border-white/[0.04]" />
+              <div className="absolute left-0 right-0 top-[60%] border-t border-white/[0.04]" />
+              <div className="absolute left-0 right-0 top-[80%] border-t border-white/[0.04]" />
+
+            </div>
+
+            <svg
+              viewBox="0 0 300 120"
+              className="absolute inset-0 w-full h-full"
+            >
+              <path
+                d="
+                  M0,90
+                  C30,80 60,40 90,50
+                  C120,60 150,100 180,70
+                  C210,40 240,20 300,45
+                "
+                fill="none"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                opacity="0.9"
+              />
+            </svg>
 
             <div
               className="
-                bg-white/[0.03]
+                absolute
+                right-[26%]
+                top-[22%]
+
+                w-[18px]
+                h-[120px]
+
+                rounded-full
+
                 border
-                border-white/10
+                border-orange-500
 
-                rounded-2xl
+                bg-orange-500/10
+              "
+            />
 
-                p-4
+            <div
+              className="
+                absolute
+                right-[28.5%]
+                top-[44%]
 
-                hover:border-white/20
+                w-4
+                h-4
 
-                transition-all
+                rounded-full
+
+                bg-orange-500
+              "
+            />
+
+          </div>
+
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 mt-10">
+
+          <div>
+
+            <p className="text-white/25 text-sm">
+              Pickup Point
+            </p>
+
+            <div className="mt-4 flex gap-4">
+
+              <div className="mt-1 text-white/40">
+                <FaMapMarkerAlt />
+              </div>
+
+              <div>
+
+                <h4 className="text-[20px] font-light tracking-[-1px]">
+                  Green Valley Apartments
+                </h4>
+
+                <p className="mt-2 text-white/30 leading-7 text-sm">
+                  Sector 21, Dwarka
+                  <br />
+                  New Delhi, India
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <p className="text-white/25 text-sm">
+              Destination
+            </p>
+
+            <div className="mt-4 flex gap-4">
+
+              <div className="mt-1 text-white/40">
+                <FaSchool />
+              </div>
+
+              <div>
+
+                <h4 className="text-[20px] font-light tracking-[-1px]">
+                  Delhi Public School
+                </h4>
+
+                <p className="mt-2 text-white/30 leading-7 text-sm">
+                  RK Puram
+                  <br />
+                  New Delhi, India
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mt-12">
+
+          <div className="flex items-center justify-between">
+
+            <h2
+              className="
+                text-[24px]
+
+                font-light
+
+                tracking-[-1px]
               "
             >
+              Timeline
+            </h2>
 
-              <div className="flex items-center justify-between">
-
-                <div className="flex items-center gap-4">
-
-                  <div
-                    className="
-                      w-14
-                      h-14
-
-                      rounded-full
-
-                      bg-white/10
-
-                      flex
-                      items-center
-                      justify-center
-
-                      text-xl
-                      text-white/80
-                    "
-                  >
-                    <FaUser />
-                  </div>
-
-                  <div>
-
-                    <h3 className="text-base font-medium text-white/90">
-                      Aryan
-                    </h3>
-
-                    <p className="text-sm text-white/40 mt-1">
-                      City School
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div className="text-right">
-
-                  <div
-                    className="
-                      px-3
-                      py-1.5
-
-                      rounded-full
-
-                      bg-white/10
-
-                      text-[11px]
-                      tracking-wide
-
-                      text-white/70
-                    "
-                  >
-                    At School
-                  </div>
-
-                  <p className="mt-2 text-sm text-white/35">
-                    🔋 82%
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
+            <p className="text-white/25 text-sm">
+              Today
+            </p>
 
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8 space-y-8">
 
-            <h3 className="text-sm tracking-[2px] text-white/40 font-medium mb-4">
-              TODAY'S SUMMARY
-            </h3>
+            <div className="flex gap-5">
 
-            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
 
-              <div
-                className="
-                  bg-white/[0.03]
-                  border
-                  border-white/10
+                <div
+                  className="
+                    w-5
+                    h-5
 
-                  rounded-2xl
+                    rounded-full
 
-                  p-4
-                "
-              >
+                    bg-green-500
+                  "
+                />
 
-                <div className="text-lg text-white/60 mb-4">
-                  <FaCheckCircle />
-                </div>
-
-                <h4 className="text-xl font-semibold text-white/90">
-                  14
-                </h4>
-
-                <p className="text-sm text-white/35 mt-1">
-                  Check-ins
-                </p>
+                <div className="w-[1px] h-24 bg-white/10" />
 
               </div>
 
-              <div
-                className="
-                  bg-white/[0.03]
-                  border
-                  border-white/10
+              <div>
 
-                  rounded-2xl
-
-                  p-4
-                "
-              >
-
-                <div className="text-lg text-white/60 mb-4">
-                  <FaExclamationTriangle />
-                </div>
-
-                <h4 className="text-xl font-semibold text-white/90">
-                  2
-                </h4>
-
-                <p className="text-sm text-white/35 mt-1">
-                  Alerts
+                <p className="text-white/25 text-sm">
+                  7:42 AM
                 </p>
 
-              </div>
+                <h3 className="mt-2 text-[20px] font-light tracking-[-1px]">
+                  Picked up from stop
+                </h3>
 
-              <div
-                className="
-                  bg-white/[0.03]
-                  border
-                  border-white/10
-
-                  rounded-2xl
-
-                  p-4
-                "
-              >
-
-                <div className="text-lg text-white/60 mb-4">
-                  <FaRoute />
-                </div>
-
-                <h4 className="text-xl font-semibold text-white/90">
-                  4.2km
-                </h4>
-
-                <p className="text-sm text-white/35 mt-1">
-                  Distance
+                <p className="mt-3 text-white/30 text-[15px] leading-7">
+                  Aryan boarded Route 12 from
+                  Green Valley Apartments.
                 </p>
 
               </div>
 
             </div>
 
-          </div>
+            <div className="flex gap-5">
 
-          <div className="mt-10">
+              <div className="flex flex-col items-center">
 
-            <div className="flex items-center justify-between mb-4">
+                <div
+                  className="
+                    w-5
+                    h-5
 
-              <h3 className="text-sm tracking-[2px] text-white/40 font-medium">
-                RECENT ALERTS
-              </h3>
+                    rounded-full
 
-              <button className="text-sm text-white/35 hover:text-white/60 transition-all">
-                Clear all
-              </button>
+                    bg-white
+                  "
+                />
 
-            </div>
+                <div className="w-[1px] h-24 bg-white/10" />
 
-            <div className="space-y-3">
+              </div>
 
-              <div
-                className="
-                  bg-white/[0.03]
-                  border
-                  border-white/10
+              <div>
 
-                  rounded-2xl
+                <p className="text-white/25 text-sm">
+                  8:06 AM
+                </p>
 
-                  p-4
-                "
-              >
+                <h3 className="mt-2 text-[20px] font-light tracking-[-1px]">
+                  Arrived at school
+                </h3>
 
-                <h4 className="text-sm font-medium text-white/85">
-                  Aryan arrived at school
-                </h4>
-
-                <p className="text-xs text-white/35 mt-2">
-                  8:12 AM
+                <p className="mt-3 text-white/30 text-[15px] leading-7">
+                  Vehicle entered school campus
+                  and attendance was confirmed.
                 </p>
 
               </div>
 
-              <div
-                className="
-                  bg-white/[0.03]
-                  border
-                  border-white/10
+            </div>
 
-                  rounded-2xl
+            <div className="flex gap-5">
 
-                  p-4
-                "
-              >
+              <div className="flex flex-col items-center">
 
-                <h4 className="text-sm font-medium text-white/85">
-                  Low battery detected
-                </h4>
+                <div
+                  className="
+                    w-5
+                    h-5
 
-                <p className="text-xs text-white/35 mt-2">
-                  1:10 PM
+                    rounded-full
+
+                    border
+                    border-white/30
+                  "
+                />
+
+              </div>
+
+              <div>
+
+                <p className="text-white/25 text-sm">
+                  Upcoming
+                </p>
+
+                <h3 className="mt-2 text-[20px] font-light tracking-[-1px]">
+                  Departure from school
+                </h3>
+
+                <p className="mt-3 text-white/30 text-[15px] leading-7">
+                  Expected departure scheduled
+                  for 2:10 PM this afternoon.
                 </p>
 
               </div>
