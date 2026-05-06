@@ -17,12 +17,10 @@ export default function Login() {
 
   let isValid = true;
 
-  if (
-    !email.endsWith("@nst.rishihood.edu.in")
-  ) {
-    setEmailError(
-      "Only official college emails allowed"
-    );
+  const normalizedEmail = email.trim().toLowerCase();
+  const allowedDomains = ["@nst.rishihood.edu.in", "@gmail.com"];
+  if (!allowedDomains.some((d) => normalizedEmail.endsWith(d))) {
+    setEmailError("Only official college emails or Gmail allowed");
     isValid = false;
   }
 
