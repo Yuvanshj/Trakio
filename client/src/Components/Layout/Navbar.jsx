@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 import { UserCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
+import trakioLogo from "../../Assets/Images/TrakioLogo.png";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Get current user
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
     });
 
-    // Listen for login/logout
     const { data: listener } =
       supabase.auth.onAuthStateChange(
         (_, session) => {
@@ -30,14 +29,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full h-16 bg-white border-b border-gray-200 px-6 flex items-center justify-between">
+    <nav className="w-full h-15 bg-white border-b border-gray-200 px-6 flex items-center justify-between">
       
-      {/* Logo */}
-      <Link to="/" className="text-xl font-bold text-black">
-        Trakio
+      <Link to="/" className="flex items-center justify-center">
+        <img src={trakioLogo} alt="Trakio Logo" className="h-20 w-auto mt-4 ml-0" />
       </Link>
 
-      {/* Nav Links */}
       <div className="flex items-center gap-6">
         <Link to="/" className="text-gray-700 hover:text-black">
           Home
@@ -52,7 +49,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Auth Section */}
       <div className="flex items-center gap-4">
         {user ? (
           <>
