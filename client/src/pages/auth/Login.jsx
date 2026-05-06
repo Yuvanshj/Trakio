@@ -8,7 +8,16 @@ export default function Login() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
+const handleGoogleLogin = async () => {
+  const { error } =
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
 
+  if (error) {
+    alert(error.message);
+  }
+};
   const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -134,7 +143,7 @@ export default function Login() {
         </div>
 <div className="mt-4">
   <button
-    // onClick={handleGoogleLogin}
+    onClick={handleGoogleLogin}
     className="w-full flex items-center justify-center gap-3 h-11 rounded-lg border border-zinc-700 
     bg-zinc-900 text-gray-200 hover:bg-zinc-800 transition-all duration-200"
   >
