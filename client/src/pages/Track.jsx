@@ -22,29 +22,29 @@ const Track = () => {
         className="
            absolute
 
-    top-0
+            top-0
 
-    right-0
+            right-0
 
-    w-[430px]
+            w-[430px]
 
-    h-screen
+            h-screen
 
-    overflow-y-auto
+            overflow-y-auto
 
-    bg-[#0b0b0b]/98
+            bg-[#0b0b0b]/98
 
-    border-l
+            border-l
 
-    border-white/[0.06]
+            border-white/[0.06]
 
-    backdrop-blur-xl
+            backdrop-blur-xl
 
-    text-white
+            text-white
 
-    p-6
+            p-6
 
-    z-30
+            z-30
         "
       >
 
