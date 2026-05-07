@@ -1,24 +1,35 @@
 import { Link } from "react-router-dom";
-import { UserCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
-import trakioLogo from "../../Assets/Images/TrakioLogo.png";
+import trakioLogo from "../../Assets/Images/icons/TrakioLogo.png";
+import profileIcon from "../../Assets/Images/icons/profileIcon.png";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+    //Here im getting the current User from the data
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
     });
-
+    //Here im creating Auth Listener
+    //It continuously watches:
+    // login
+    // logout
+    // session refresh
     const { data: listener } =
       supabase.auth.onAuthStateChange(
+     //This function runs whenever auth changes.
         (_, session) => {
-          setUser(session?.user || null);
+          // If session exists → get user
+          // Else → undefined
+          setUser(session ? session.user : null);
         }
       );
-
+      //CLEANUP FUNCTION
+      //Without cleanup:
+      // Every time component mounts:
+      // new listener gets added
     return () => {
       listener.subscription.unsubscribe();
     };
@@ -36,19 +47,19 @@ const Navbar = () => {
 </p>      </div>
 
       <div className="flex-3 flex items-center justify-center">
-        <div className="bg-gray-100 rounded-full px-6 py-1 flex items-center gap-4 shadow-sm">
-          <Link to="/" className="px-3 md:px-4 py-2 rounded-full text-gray-700 hover:text-black transition-colors">
+        <div className="bg-zinc-900 rounded-full px-6 py-1.5 flex items-center gap-4 shadow-md backdrop-blur-lg border border-white/20">
+          <Link to="/" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
             Home
           </Link>
 
-          <Link to="/track" className="px-3 md:px-4 py-2 rounded-full text-gray-700 hover:text-black transition-colors">
+          <Link to="/track" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
             Track
           </Link>
 
-          <Link to="/about" className="px-3 md:px-4 py-2 rounded-full text-gray-700 hover:text-black transition-colors">
+          <Link to="/about" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
             About
           </Link>
-          <Link to="/" className="px-3 md:px-4 py-2 rounded-full text-gray-700 hover:text-black transition-colors">
+          <Link to="/" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
             App
           </Link>
         </div>
@@ -59,26 +70,18 @@ const Navbar = () => {
         {user ? (
           <>
             <Link to="/profile" className="inline-flex items-center">
-              <UserCircle
-                size={32}
-                className="text-gray-700 hover:text-black transition-colors"
-              />
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors">
+                <img src={profileIcon} alt="Profile" className="w-5 h-5" />
+              </div>
             </Link>
           </>
         ) : (
           <>
             <Link
-              to="/login"
-              className="text-gray-700 hover:text-black"
-            >
-              Login
-            </Link>
-
-            <Link
               to="/signup"
-              className="px-4 py-2 rounded-lg bg-black text-white"
+              className="px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Sign Up
+              Get Started
             </Link>
           </>
         )}

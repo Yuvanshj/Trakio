@@ -1,7 +1,7 @@
 import TeamMemberCard from "./TeamMemberCard";
-import Yuvi from "../../assets/Images/Yuvi.png";
-import Yash from "../../assets/Images/Yash.jpeg";
-import Alien from "../../assets/Images/alien.png";
+import Yuvi from "../../Assets/team/Yuvi.png";
+import Yash from "../../Assets/team/Yash.jpeg";
+import Alien from "../../Assets/team/alien.png";
 
 import { useState } from "react";
 
