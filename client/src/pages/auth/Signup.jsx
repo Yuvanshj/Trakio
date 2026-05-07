@@ -116,7 +116,7 @@ export default function Signup() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
     
-      <div className="relative w-full max-w-md rounded-xl bg-zinc-900 p-8 shadow-2xl border border-zinc-800 backdrop-blur-md">
+      <div className="relative w-full max-w-md rounded-xl bg-zinc-900 p-5 shadow-2xl border border-zinc-800 backdrop-blur-md">
         
         <Link
           to="/"
@@ -132,15 +132,14 @@ export default function Signup() {
         </Link>
 
         <div className="flex items-center justify-center flex-col mt-3">
-<p className="text-4xl font-bold text-gray-200">            Create Account
-          </p>
-          <p className="text-sm mt-3 text-gray-400">
+<p className="text-4xl font-bold text-gray-200">Create Account</p>
+          <p className="text-sm mt-2 text-gray-400">
             Join <span className="text-gray-200 font-semibold">Trackio</span> today
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col mt-7">
-          <label htmlFor="name" className="mb-2 text-sm font-medium text-gray-300">
+        <form onSubmit={handleSubmit} className="flex flex-col mt-5">
+          <label htmlFor="name" className="mb-1.5 text-sm font-medium text-gray-300">
             Full Name
           </label>
           <input
@@ -150,11 +149,11 @@ export default function Signup() {
             placeholder="Shresth Juyal"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {nameError && <p className="text-red-400 text-xs mt-1">{nameError}</p>}
 
-          <label htmlFor="email" className="mt-5 mb-2 text-sm font-medium text-gray-300">
+          <label htmlFor="email" className="mt-3 mb-1.5 text-sm font-medium text-gray-300">
             Email
           </label>
           <input
@@ -164,11 +163,11 @@ export default function Signup() {
             placeholder="abc@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {emailError && <p className="text-red-400 text-xs mt-1">{emailError}</p>}
 
-          <label htmlFor="password" className="mt-5 mb-2 text-sm font-medium text-gray-300">
+          <label htmlFor="password" className="mt-3 mb-1.5 text-sm font-medium text-gray-300">
             Password
           </label>
           <input
@@ -178,11 +177,11 @@ export default function Signup() {
             placeholder="••••••••"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {passwordError && <p className="text-red-400 text-xs mt-1">{passwordError}</p>}
 
-          <label htmlFor="phone" className="mt-5 mb-2 text-sm font-medium text-gray-300">
+          <label htmlFor="phone" className="mt-3 mb-1.5 text-sm font-medium text-gray-300">
             Phone Number
           </label>
           <input
@@ -192,11 +191,11 @@ export default function Signup() {
             placeholder="9876543210"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {phoneError && <p className="text-red-400 text-xs mt-1">{phoneError}</p>}
 
-          <label htmlFor="address" className="mt-5 mb-2 text-sm font-medium text-gray-300">
+          <label htmlFor="address" className="mt-3 mb-1.5 text-sm font-medium text-gray-300">
             Home Address
           </label>
           <input
@@ -206,16 +205,16 @@ export default function Signup() {
             placeholder="123 Main Street, City"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           {addressError && <p className="text-red-400 text-xs mt-1">{addressError}</p>}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-9 h-11 rounded-lg border border-[#3F3F46]/30 
+            className="w-full mt-5 h-10 rounded-lg border border-[#3F3F46]/30 
             bg-linear-to-b from-[#FAFAFA] to-[#E4E4E7] 
-            text-[#18181B] font-semibold shadow-sm hover:shadow-md
+            text-[#18181B] font-semibold text-sm shadow-sm hover:shadow-md
             hover:from-[#EDEDED] hover:to-[#D4D4D8] 
             active:scale-95 transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed"
         
@@ -224,26 +223,26 @@ export default function Signup() {
           </button>
         </form>
 
-        <div className="relative flex items-center mt-5">
+        <div className="relative flex items-center mt-4">
           <div className="grow border-t border-[#3F3F46]" />
-          <span className="mx-3 text-xs text-[#A1A1AA]">Or continue with</span>
+          <span className="mx-2 text-xs text-[#A1A1AA]">Or continue with</span>
           <div className="grow border-t border-[#3F3F46]" />
         </div>
-<div className="mt-4">
+<div className="mt-3">
   <button
     // onClick={handleGoogleLogin}
-    className="w-full flex items-center justify-center gap-3 h-11 rounded-lg border border-zinc-700 
-    bg-zinc-900 text-gray-200 hover:bg-zinc-800 transition-all duration-200"
+    className="w-full flex items-center justify-center gap-2 h-10 rounded-lg border border-zinc-700 
+    bg-zinc-900 text-gray-200 hover:bg-zinc-800 transition-all duration-200 text-sm"
   >
     <img
       src="https://www.svgrepo.com/show/475656/google-color.svg"
       alt="google"
-      className="w-5 h-5"
+      className="w-4 h-4"
     />
     Continue with Google
   </button>
 </div>
-        <div className="relative flex items-center justify-center mt-6 gap-1 text-sm text-gray-400">
+        <div className="relative flex items-center justify-center mt-4 gap-1 text-xs text-gray-400">
           <p>Already have an account?</p>
           <Link
             to="/login"
