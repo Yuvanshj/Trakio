@@ -24,10 +24,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-  };
-
   return (
     <nav className="w-full h-17 bg-white border-b border-gray-200 px-6 flex items-center">
 
@@ -62,17 +58,12 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         {user ? (
           <>
-            <UserCircle
-              size={32}
-              className="text-gray-700"
-            />
-
-            <button
-              onClick={handleLogout}
-              className="px-3 py-2 rounded-lg bg-black text-white text-sm"
-            >
-              Logout
-            </button>
+            <Link to="/profile" className="inline-flex items-center">
+              <UserCircle
+                size={32}
+                className="text-gray-700 hover:text-black transition-colors"
+              />
+            </Link>
           </>
         ) : (
           <>

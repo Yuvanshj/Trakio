@@ -20,7 +20,7 @@ export default function AboutHero() {
     {
       id: 2,
       name: "Shresth Juyal",
-      role: "Auth God",
+      role: "Yashaswi Dad",
       image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },

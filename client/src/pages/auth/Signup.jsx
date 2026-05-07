@@ -6,27 +6,33 @@ export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [addressError, setAddressError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
   e.preventDefault();
+  setLoading(true);
 
   setNameError("");
   setEmailError("");
   setPasswordError("");
+  setPhoneError("");
+  setAddressError("");
 
   let isValid = true;
 
-  // Name validation
   if (name.trim().length < 2) {
     setNameError("Enter a valid name");
     isValid = false;
   }
 
-  // Official email validation
   if (
     !email.endsWith("@nst.rishihood.edu.in")
   ) {
@@ -36,7 +42,6 @@ export default function Signup() {
     isValid = false;
   }
 
-  // Password validation
   if (password.length < 8) {
     setPasswordError(
       "Password must be at least 8 characters"
@@ -44,28 +49,69 @@ export default function Signup() {
     isValid = false;
   }
 
-  // Stop if validation fails
+  if (phone.trim().length < 10) {
+    setPhoneError("Enter a valid phone number");
+    isValid = false;
+  }
+
+  if (address.trim().length < 5) {
+    setAddressError("Enter a valid address");
+    isValid = false;
+  }
+
   if (!isValid) {
+    setLoading(false);
     return;
   }
 
-  // Supabase signup
-  const { data, error } =
-    await supabase.auth.signUp({
-      email,
-      password,
-    });
+  try {
+    // Supabase signup
+    const { data, error } =
+      await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: name.trim(),
+          },
+        },
+      });
 
-  if (error) {
-    alert(error.message);
-    return;
+    if (error) {
+      alert(error.message);
+      setLoading(false);
+      return;
+    }
+
+    // Create profile in profiles table
+    if (data?.user?.id) {
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .insert([
+          {
+            id: data.user.id,
+            full_name: name.trim(),
+            phone: phone.trim(),
+            address: address.trim(),
+            email: email.trim(),
+          },
+        ]);
+
+      if (profileError) {
+        console.error('Error creating profile:', profileError);
+        alert('Signup successful but profile creation failed. Please update your profile later.');
+      } else {
+        alert("Signup successful! Please check your email to verify your account.");
+      }
+    }
+
+    navigate("/login");
+  } catch (error) {
+    alert("An unexpected error occurred. Please try again.");
+    console.error("Signup error:", error);
+  } finally {
+    setLoading(false);
   }
-
-  alert("Signup successful!");
-
-  console.log(data);
-
-  navigate("/login");
 };
   return (
     <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
@@ -136,16 +182,45 @@ export default function Signup() {
           />
           {passwordError && <p className="text-red-400 text-xs mt-1">{passwordError}</p>}
 
+          <label htmlFor="phone" className="mt-5 mb-2 text-sm font-medium text-gray-300">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="9876543210"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          />
+          {phoneError && <p className="text-red-400 text-xs mt-1">{phoneError}</p>}
+
+          <label htmlFor="address" className="mt-5 mb-2 text-sm font-medium text-gray-300">
+            Home Address
+          </label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="123 Main Street, City"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          />
+          {addressError && <p className="text-red-400 text-xs mt-1">{addressError}</p>}
+
           <button
             type="submit"
+            disabled={loading}
             className="w-full mt-9 h-11 rounded-lg border border-[#3F3F46]/30 
             bg-linear-to-b from-[#FAFAFA] to-[#E4E4E7] 
             text-[#18181B] font-semibold shadow-sm hover:shadow-md
             hover:from-[#EDEDED] hover:to-[#D4D4D8] 
-            active:scale-95 transition-all duration-200 ease-out"
+            active:scale-95 transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed"
         
           >
-            Sign Up
+            {loading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
 
