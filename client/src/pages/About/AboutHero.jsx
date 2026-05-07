@@ -21,14 +21,14 @@ export default function AboutHero() {
     {
       id: 2,
       name: "Shresth Juyal",
-      role: "Yashaswi Dad",
+      role: "Yashaswi's Son",
       image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },
     {
       id: 3,
       name: "Yuvansh Juneja",
-      role: "Map God",
+      role: "Yashaswi's Tatta",
       image: Yuvi,
       about:"Designs elegant user experiences with strong attention to detail and storytelling.",
     }

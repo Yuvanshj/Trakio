@@ -5,7 +5,7 @@ export default function HeroSection() {
       className="
         min-h-screen
 
-        bg-[#f5f3ee]
+        bg-white
 
         overflow-hidden
       "
@@ -142,6 +142,98 @@ export default function HeroSection() {
         </div>
 
       </div>
+
+
+<div
+  className="
+    relative
+
+    mt-24
+
+    w-full
+
+    flex
+    justify-center
+    items-center
+  "
+>
+
+
+  <div
+    className="
+      absolute
+
+      bottom-10
+
+      w-[90%]
+      max-w-5xl
+
+      h-[180px]
+
+      rounded-full
+
+      border-2
+      border-dashed
+      border-black/10
+    "
+  />
+
+
+  <div
+    className="
+      absolute
+
+      left-[10%]
+      bottom-28
+
+      w-5
+      h-5
+
+      rounded-full
+
+      bg-orange-400
+
+      border-4
+      border-white
+    "
+  />
+
+
+  <div
+    className="
+      absolute
+
+      right-[10%]
+      bottom-24
+
+      w-5
+      h-5
+
+      rounded-full
+
+      bg-orange-400
+
+      border-4
+      border-white
+    "
+  />
+
+  <img
+    src="/bus.png"
+    alt="School Bus"
+
+    className="
+      relative
+      z-10
+
+      w-full
+      max-w-5xl
+
+      object-contain
+    "
+  />
+
+</div>
 
     </section>
   );
