@@ -32,9 +32,7 @@
   animation-direction: reverse;
 }
 
-<<<<<<< Updated upstream
 
-=======
 .connect-marquee {
   overflow: hidden;
   width: 100%;
@@ -66,4 +64,3 @@
   animation-duration: 30s;
   cursor: pointer;
 }
->>>>>>> Stashed changes
