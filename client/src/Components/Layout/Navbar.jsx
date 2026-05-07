@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import trakioLogo from "../../Assets/Images/icons/TrakioLogo.png";
+import trakioLogoWhite from "../../Assets/Images/icons/TrakioLogoWhite.png";
 import profileIcon from "../../Assets/Images/icons/profileIcon.png";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
+  const location = useLocation();
+  const isWaitlistPage = location.pathname === "/waitlist";
 
   useEffect(() => {
     //Here im getting the current User from the data
@@ -36,13 +39,21 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full h-17 bg-white border-b border-gray-200 px-6 flex items-center">
+    <nav
+      className={`w-full h-17 px-6 flex items-center border-b ${
+        isWaitlistPage ? "bg-[#020202]/98 backdrop-blur-md border-white/5 text-white" : "bg-white border-gray-200 text-black"
+      }`}
+    >
 
       <div className="flex items-center mt-3">
         <Link to="/" className="flex items-center">
-          <img src={trakioLogo} alt="Trakio Logo" className="h-14 md:h-16 w-auto" />
+          <img
+            src={isWaitlistPage ? trakioLogoWhite : trakioLogo}
+            alt="Trakio Logo"
+            className="h-14 md:h-16 w-auto"
+          />
         </Link>
-<p className="text-black text-xl font-bold tracking-tight items-center justify-between mb-2">
+<p className={`text-xl font-bold tracking-tight items-center justify-between mb-2 ${isWaitlistPage ? "text-white" : "text-black"}`}>
   Trakio
 </p>      </div>
 
@@ -70,7 +81,7 @@ const Navbar = () => {
         {user ? (
           <>
             <Link to="/profile" className="inline-flex items-center">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors">
+              <div className={`flex items-center justify-center w-10 h-10 rounded-lg border transition-colors ${isWaitlistPage ? "border-white/15 bg-white/5 hover:bg-white/10" : "border-gray-200 bg-gray-50 hover:bg-gray-100"}`}>
                 <img src={profileIcon} alt="Profile" className="w-5 h-5" />
               </div>
             </Link>
@@ -79,7 +90,7 @@ const Navbar = () => {
           <>
             <Link
               to="/signup"
-              className="px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isWaitlistPage ? "bg-white text-black hover:bg-gray-200" : "bg-gray-900 text-white hover:bg-gray-800"}`}
             >
               Get Started
             </Link>
