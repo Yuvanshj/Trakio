@@ -4,6 +4,7 @@ import Yash from "../../Assets/team/Yash.jpeg";
 import Alien from "../../Assets/team/alien.png";
 
 import { useState } from "react";
+import RollingText from "../../Components/RollingText";
 
 export default function AboutHero() {
 
@@ -44,9 +45,9 @@ export default function AboutHero() {
 
       <div className="hero-content relative z-10 text-center">
 
-        <h2 className="main-heading select-none font-extrabold uppercase text-[#111] leading-[0.9] tracking-[-4px] text-[70px] sm:text-[90px] md:text-[120px]">
-          CONNECT WITH <br />
-          OUR TEAM
+        <h2 className="main-heading select-none font-extrabold uppercase text-[#111] leading-[0.9] tracking-[-4px] text-[70px] sm:text-[90px] md:text-[120px] flex flex-col items-center">
+          <RollingText text="CONNECT WITH" delayOffset={0} />
+          <RollingText text="OUR TEAM" delayOffset={12} />
         </h2>
 
       </div>

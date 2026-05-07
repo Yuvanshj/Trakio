@@ -1,5 +1,6 @@
-export default function FeedbackSection() {
+import RollingText from "../../Components/RollingText";
 
+export default function FeedbackSection() {
   const testimonials = [
   {
     name: "Alex Carter",
@@ -144,14 +145,13 @@ export default function FeedbackSection() {
             font-black
             leading-[0.9]
             tracking-[-4px]
-
             text-[50px]
             md:text-[90px]
+            flex flex-col items-center
           "
         >
-          Words Of Praise
-          <br />
-          From Our Users
+          <RollingText text="Words Of Praise" delayOffset={0} animateOnScroll={true} />
+          <RollingText text="From Our Users" delayOffset={15} animateOnScroll={true} />
         </h2>
 
       </div>
