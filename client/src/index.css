@@ -45,7 +45,7 @@
 
   width: max-content;
 
-  animation: connectScroll 20s linear infinite;
+  animation: connectScroll 30s linear infinite;
   transition: all 0.5s ease;
 }
 
@@ -61,6 +61,7 @@
 
 }
 .group:hover .connect-marquee-content {
-  animation-duration: 20s;
+  animation-duration: 30s;
   cursor: pointer;
 }
+>>>>>>> Stashed changes

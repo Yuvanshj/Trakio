@@ -8,6 +8,20 @@ export default function ConnectBanner() {
     "The Trakio",
     "Connect",
     "Collaborate",
+    "Instagram",
+    "LinkedIn",
+    "GitHub",
+    "Mail",
+    "The Trakio",
+    "Connect",
+    "Collaborate",
+    "Instagram",
+    "LinkedIn",
+    "GitHub",
+    "Mail",
+    "The Trakio",
+    "Connect",
+    "Collaborate",
   ];
 
   return (
@@ -17,16 +31,14 @@ export default function ConnectBanner() {
         relative
         overflow-hidden
 
-        bg-gradient-to-b
-        from-white/20
-        to-black
+        bg-black
+        
 
         py-8
 
         transition-all
         duration-700
 
-        hover:scale-[1.01]
       "
     >
 
@@ -41,7 +53,7 @@ export default function ConnectBanner() {
             transition-all
             duration-700
 
-            group-hover:invert
+           
           "
         >
 
@@ -61,12 +73,12 @@ export default function ConnectBanner() {
                   uppercase
                   tracking-[4px]
 
-                  text-sm
+                  text-2xl
                   md:text-base
+                  font-extrabold
 
-                  font-semibold
+                  text-white
 
-                  text-black/30
                 "
               >
                 {item}
@@ -75,13 +87,13 @@ export default function ConnectBanner() {
 
               <span
                 className="
-                  text-black/30
+                  text-white
                   text-xl
 
                   transition-all
                   duration-500
 
-                  group-hover:text-black
+                  group-hover:text-white
                   group-hover:scale-150
                 "
               >
