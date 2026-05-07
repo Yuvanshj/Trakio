@@ -111,13 +111,18 @@ const Profile = () => {
     .toUpperCase();
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="border-b border-gray-200 px-6 py-8 sm:px-8">
+    <div className="relative min-h-screen overflow-hidden bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white">
+      <div className="absolute inset-0 pointer-events-none opacity-70">
+        <div className="absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-white/[0.03] blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-8 shadow-[0_30px_120px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-6">
               {imageError ? (
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg bg-gray-950 text-xl font-semibold text-white">
+                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-xl font-semibold text-white">
                   {initials}
                 </div>
               ) : (
@@ -125,13 +130,13 @@ const Profile = () => {
                   src={profileImage}
                   alt={displayName}
                   onError={() => setImageError(true)}
-                  className="h-20 w-20 rounded-lg object-cover"
+                  className="h-20 w-20 rounded-2xl border border-white/10 object-cover shadow-lg"
                 />
               )}
               <div>
-                <h1 className="text-2xl font-bold text-gray-950">{displayName}</h1>
-                <p className="text-sm text-gray-600">{displayRole}</p>
-                <div className="mt-3 space-y-1 text-sm text-gray-600">
+                <h1 className="text-2xl font-bold text-white">{displayName}</h1>
+                <p className="text-sm text-white/70">{displayRole}</p>
+                <div className="mt-3 space-y-1 text-sm text-white/70">
                   <p>{user?.email || "No email"}</p>
                   <p>{displayPhone}</p>
                   <p>{displayAddress}</p>
@@ -140,20 +145,20 @@ const Profile = () => {
             </div>
 
             <div className="flex flex-col gap-2 sm:flex-row">
-              <button className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-50">
+              <button className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10">
                 <Edit3 size={16} />
                 Edit
               </button>
               <Link
                 to="/track"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-black transition-colors hover:bg-white/85"
               >
                 <BusFront size={16} />
                 Track
               </Link>
               <button
                 onClick={handleLogout}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-700"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-red-500/90 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-500"
               >
                 Logout
               </button>
@@ -164,8 +169,8 @@ const Profile = () => {
         <div className="grid gap-6 px-6 py-8 sm:px-8 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center justify-between">
-              <h2 className="text-xl font-semibold text-gray-900">Children</h2>
-              <button className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+              <h2 className="text-xl font-semibold text-white">Children</h2>
+              <button className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm font-medium text-white/80 hover:bg-white/10">
                 + Add
               </button>
             </div>
@@ -173,42 +178,42 @@ const Profile = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-lg border border-gray-200 p-5">
-              <p className="text-xs font-semibold uppercase text-gray-500">Status</p>
-              <p className="mt-3 text-2xl font-bold text-gray-900">2 Children</p>
-              <p className="mt-2 text-sm text-emerald-600">All tracking active</p>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Status</p>
+              <p className="mt-3 text-2xl font-bold text-white">2 Children</p>
+              <p className="mt-2 text-sm text-emerald-300">All tracking active</p>
             </div>
 
-            <div className="rounded-lg bg-red-50 p-5">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl">
               <div className="flex items-center gap-2">
-                <ShieldAlert size={18} className="text-red-600" />
-                <h3 className="font-semibold text-red-900">Emergency SOS</h3>
+                <ShieldAlert size={18} className="text-red-400" />
+                <h3 className="font-semibold text-white">Emergency SOS</h3>
               </div>
-              <p className="mt-3 text-sm text-red-800">Instant alert to school and driver</p>
-              <button className="mt-4 w-full rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700">
+              <p className="mt-3 text-sm text-white/70">Instant alert to school and driver</p>
+              <button className="mt-4 w-full rounded-full bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-400">
                 Activate SOS
               </button>
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-semibold text-gray-900">Support</h3>
+              <h3 className="font-semibold text-white">Support</h3>
               {supportItems.map((item) => (
-                <div key={item.label} className="rounded-lg border border-gray-200 p-3 text-sm">
-                  <p className="text-xs text-gray-600">{item.label}</p>
-                  <p className="mt-1 font-medium text-gray-900">{item.value}</p>
+                <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 p-3 text-sm backdrop-blur-xl">
+                  <p className="text-xs text-white/45">{item.label}</p>
+                  <p className="mt-1 font-medium text-white">{item.value}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 px-6 py-8 sm:px-8">
-          <h2 className="mb-4 text-xl font-semibold text-gray-900">Recent Activity</h2>
+        <div className="border-t border-white/10 px-6 py-8 sm:px-8">
+          <h2 className="mb-4 text-xl font-semibold text-white">Recent Activity</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {activityLogs.map((log) => (
-              <div key={log.time} className="rounded-lg border border-gray-200 p-4">
-                <p className="text-sm font-medium text-gray-600">{log.time}</p>
-                <p className="mt-2 text-sm text-gray-900">{log.text}</p>
+              <div key={log.time} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
+                <p className="text-sm font-medium text-white/55">{log.time}</p>
+                <p className="mt-2 text-sm text-white">{log.text}</p>
               </div>
             ))}
           </div>
