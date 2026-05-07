@@ -3,7 +3,7 @@ import trakioLogo from '../Assets/Images/icons/TrakioLogo.png';
 import { SiSupabase, SiReact, SiNodedotjs, SiExpress } from 'react-icons/si';
 import mobileViewImg from '../Assets/Images/Mobile View Request.png';
 
-const MobileApp = () => {
+const Waitlist = () => {
   const [email, setEmail] = useState('');
   const [joined, setJoined] = useState(false);
 
@@ -154,4 +154,4 @@ const MobileApp = () => {
   );
 };
 
-export default MobileApp;
+export default Waitlist;
