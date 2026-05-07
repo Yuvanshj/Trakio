@@ -10,7 +10,7 @@ const RollingText = ({ text, delayOffset = 0, animateOnScroll = false }) => {
   const shouldAnimate = animateOnScroll ? inView : true;
 
   return (
-    <span ref={ref} className="inline-flex overflow-hidden py-1">
+    <span ref={ref} className="inline-flex overflow-hidden py-1 select-none">
       {text.split("").map((char, index) => (
         <motion.span
           key={index}
