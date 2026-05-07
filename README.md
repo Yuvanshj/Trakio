@@ -45,8 +45,7 @@ Parents often face uncertainty about their child's commute whether the bus has a
 ### Frontend
 - **[React 18](https://reactjs.org/)** + **[Vite](https://vitejs.dev/)** — Fast, modern UI framework
 - **[Tailwind CSS](https://tailwindcss.com/)** — Utility-first styling
-- **[Zustand](https://zustand-demo.pmnd.rs/)** — Lightweight global state management
-- **[Google Maps API](https://developers.google.com/maps)** — Interactive maps and routing
+- **[Leaflet](https://leafletjs.com/)** — Interactive maps and routing
 
 ### Backend
 - **[Node.js](https://nodejs.org/)** + **[Express.js](https://expressjs.com/)** — REST API server
@@ -54,8 +53,5 @@ Parents often face uncertainty about their child's commute whether the bus has a
 - **[MongoDB](https://mongodb.com/)** + **[Mongoose](https://mongoosejs.com/)** — Database and ODM
 
 ### Auth & Infrastructure
-- **JWT** — Stateless, role-based token authentication
-- **Firebase Auth** *(optional)* — Social login support
-- **dotenv** — Environment configuration
-
+- **Supabase Auth** — Social login support
 ---
