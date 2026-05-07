@@ -3,7 +3,7 @@ import ScrollVelocity from '../../Components/ScrollVelocity/ScrollVelocity';
 
 export default function ConnectBanner() {
 
-  const marqueeText = "Instagram • LinkedIn • GitHub • Mail • The Trakio • Connect • Collaborate •";
+  const marqueeText = "Instagram • LinkedIn • GitHub • Mail • Trakio • Connect • Collaborate •";
 
   return (
     <section
@@ -26,10 +26,10 @@ export default function ConnectBanner() {
         numCopies={4}
         className="
           uppercase
-          tracking-tighter
+          tracking-[4px]
           text-xl
           md:text-3xl
-          font-black
+          font-bold
           text-white
         "
         parallaxStyle={{ padding: '2px 0' }}
