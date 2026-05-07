@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import trakioLogo from '../Assets/Images/icons/TrakioLogo.png';
 import { SiSupabase, SiReact, SiNodedotjs, SiExpress } from 'react-icons/si';
 import mobileViewImg from '../Assets/Images/Mobile View Request.png';
@@ -7,30 +7,26 @@ const Waitlist = () => {
   const [email, setEmail] = useState('');
   const [joined, setJoined] = useState(false);
 
-  useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
-  }, []);
-
   const handleJoin = (e) => {
     e.preventDefault();
+
     if (email) {
       setJoined(true);
       setEmail('');
-      setTimeout(() => setJoined(false), 3000);
+
+      setTimeout(() => {
+        setJoined(false);
+      }, 3000);
     }
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-4.25rem)] bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white overflow-hidden font-sans selection:bg-white/20 flex flex-col justify-start pt-8 lg:pt-10">
+    <div className="relative w-full h-screen overflow-hidden bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white font-sans selection:bg-white/20 flex flex-col justify-start pt-8 lg:pt-10">
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col items-center justify-center select-none opacity-80">
         <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">
           THE TRAKIO
         </h1>
+
         <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">
           MOBILE APP
         </h1>
@@ -38,6 +34,8 @@ const Waitlist = () => {
 
       <div className="h-full w-full max-w-screen-2xl mx-auto px-6 flex flex-col justify-start relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full pt-10 lg:pt-12">
+          
+          {/* Left Side */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl">
             <div className="mb-6 relative group inline-block">
               <img
@@ -58,10 +56,14 @@ const Waitlist = () => {
             </h1>
 
             <p className="text-gray-300 text-lg sm:text-2xl max-w-lg mb-8 font-medium leading-relaxed">
-              Receive all the latest news and updates, as well as early access to the Trakio beta.
+              Receive all the latest news and updates, as well as early access
+              to the Trakio beta.
             </p>
 
-            <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mb-10">
+            <form
+              onSubmit={handleJoin}
+              className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mb-10"
+            >
               <div className="relative flex-1">
                 <input
                   type="email"
@@ -72,6 +74,7 @@ const Waitlist = () => {
                   className="w-full h-full bg-[#0a0a0a]/80 backdrop-blur-md border border-[#444] rounded-2xl px-6 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-white/80 focus:bg-white/10 focus:ring-2 focus:ring-white/30 transition-all duration-300 text-lg"
                 />
               </div>
+
               <button
                 type="submit"
                 className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 whitespace-nowrap flex items-center justify-center text-lg ${
@@ -88,30 +91,52 @@ const Waitlist = () => {
               <p className="text-xs text-gray-400 mb-6 uppercase tracking-[0.2em] font-semibold">
                 Powered by
               </p>
+
               <div className="flex gap-8 items-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 flex-wrap justify-center lg:justify-start">
                 <div className="flex items-center gap-2 group/tech cursor-pointer">
                   <SiSupabase className="text-2xl group-hover/tech:text-emerald-500 transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">Supabase</span>
+                  <span className="font-bold tracking-tight text-lg">
+                    Supabase
+                  </span>
                 </div>
+
                 <div className="flex items-center gap-2 group/tech cursor-pointer">
                   <SiReact className="text-2xl group-hover/tech:text-blue-400 transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">React</span>
+                  <span className="font-bold tracking-tight text-lg">
+                    React
+                  </span>
                 </div>
+
                 <div className="flex items-center gap-2 group/tech cursor-pointer">
                   <SiNodedotjs className="text-2xl group-hover/tech:text-green-500 transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">Node</span>
+                  <span className="font-bold tracking-tight text-lg">
+                    Node
+                  </span>
                 </div>
+
                 <div className="flex items-center gap-2 group/tech cursor-pointer">
                   <SiExpress className="text-2xl transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">Express</span>
+                  <span className="font-bold tracking-tight text-lg">
+                    Express
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex-1 flex justify-center lg:justify-end w-full lg:w-auto perspective-[2000px] h-[60vh] sm:h-[70vh] lg:h-[80vh]" style={{ maxHeight: '800px' }}>
-            <div className="relative h-full group hover:-translate-y-4 transition-transform duration-700 ease-out" style={{ aspectRatio: '9 / 19' }}>
-              <div className="relative w-full h-full bg-black rounded-[2.5rem] sm:rounded-[3rem] border border-[#111] overflow-hidden ring-1 ring-white/20 z-10 flex flex-col" style={{ borderWidth: '6px' }}>
+          {/* Right Side */}
+          <div
+            className="flex-1 flex justify-center lg:justify-end w-full lg:w-auto perspective-[2000px] h-[60vh] sm:h-[70vh] lg:h-[80vh]"
+            style={{ maxHeight: '800px' }}
+          >
+            <div
+              className="relative h-full group hover:-translate-y-4 transition-transform duration-700 ease-out"
+              style={{ aspectRatio: '9 / 19' }}
+            >
+              <div
+                className="relative w-full h-full bg-black rounded-[2.5rem] sm:rounded-[3rem] border border-[#111] overflow-hidden ring-1 ring-white/20 z-10 flex flex-col"
+                style={{ borderWidth: '6px' }}
+              >
                 <div className="absolute top-0 inset-x-0 h-7 sm:h-8 flex justify-center z-50 pointer-events-none">
                   <div className="w-28 sm:w-36 h-6 sm:h-7 bg-[#111] rounded-b-3xl relative">
                     <div className="absolute right-3 sm:right-4 top-1.5 w-3 h-3 rounded-full bg-black/80 border border-white/5 flex items-center justify-center">
@@ -136,6 +161,7 @@ const Waitlist = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

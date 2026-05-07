@@ -9,6 +9,7 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const location = useLocation();
   const isWaitlistPage = location.pathname === "/waitlist";
+  const isAboutPage = location.pathname === "/about";
 
   useEffect(() => {
     //Here im getting the current User from the data
@@ -41,7 +42,11 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full h-17 px-6 flex items-center border-b ${
-        isWaitlistPage ? "bg-[#020202]/98 backdrop-blur-md border-white/5 text-white" : "bg-white border-gray-200 text-black"
+        isWaitlistPage 
+          ? "bg-[#020202]/98 backdrop-blur-md border-white/5 text-white" 
+          : isAboutPage 
+          ? "bg-[#f5f5f5]/70 backdrop-blur-md border-gray-300/50 text-black" 
+          : "bg-white border-gray-200 text-black"
       }`}
     >
 
@@ -70,8 +75,8 @@ const Navbar = () => {
           <Link to="/about" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
             About
           </Link>
-          <Link to="/" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
-            App
+          <Link to="/waitlist" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
+            Waitlist
           </Link>
         </div>
       </div>
@@ -81,7 +86,7 @@ const Navbar = () => {
         {user ? (
           <>
             <Link to="/profile" className="inline-flex items-center">
-              <div className={`flex items-center justify-center w-10 h-10 rounded-lg border transition-colors ${isWaitlistPage ? "border-white/15 bg-white/5 hover:bg-white/10" : "border-gray-200 bg-gray-50 hover:bg-gray-100"}`}>
+              <div className={`flex items-center justify-center w-10 h-10 rounded-lg border transition-colors ${isWaitlistPage ? "border-white/15 bg-white/5 hover:bg-white/10" : isAboutPage ? "border-gray-300 bg-gray-100 hover:bg-gray-200" : "border-gray-200 bg-gray-50 hover:bg-gray-100"}`}>
                 <img src={profileIcon} alt="Profile" className="w-5 h-5" />
               </div>
             </Link>
@@ -90,7 +95,7 @@ const Navbar = () => {
           <>
             <Link
               to="/signup"
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isWaitlistPage ? "bg-white text-black hover:bg-gray-200" : "bg-gray-900 text-white hover:bg-gray-800"}`}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isWaitlistPage ? "bg-white text-black hover:bg-gray-200" : isAboutPage ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-gray-900 text-white hover:bg-gray-800"}`}
             >
               Get Started
             </Link>
