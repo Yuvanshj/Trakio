@@ -105,7 +105,7 @@ export default function HeroSection() {
         text-white/70
       "
     >
-      Productivity Reimagined
+        We Welcome You To
     </p>
 
   </div>
@@ -127,11 +127,11 @@ export default function HeroSection() {
       lg:text-[130px]
     "
   >
-    Time Tracking
+    India's 1st
     <br />
-    And Efficient Habits
+    Live Traking
     <br />
-    Lead To Success
+    Kuch Tho
   </h1>
 
   <p
@@ -228,6 +228,248 @@ export default function HeroSection() {
     >
       Sign Up
     </button>
+
+  </div>
+
+</div>
+
+
+{/* Dashboard Preview */}
+<div
+  className="
+    relative
+
+    mt-24
+
+    w-full
+
+    flex
+    justify-center
+    items-center
+  "
+>
+
+  {/* Main Wrapper */}
+  <div
+    className="
+      relative
+
+      w-full
+      max-w-6xl
+
+      h-[700px]
+    "
+  >
+
+    {/* Card 1 */}
+    <div
+      className="
+        absolute
+
+        left-0
+        top-20
+
+        w-[370px]
+        h-[220px]
+
+        rounded-[30px]
+
+        border
+        border-white/10
+
+        bg-white/[0.05]
+
+        backdrop-blur-xl
+
+        p-6
+      "
+    >
+
+      <div className="flex items-center justify-between">
+
+        <p className="text-white/60 text-sm">
+          Weekly Progress
+        </p>
+
+        <div className="w-3 h-3 rounded-full bg-green-400" />
+
+      </div>
+
+      <h3
+        className="
+          mt-6
+
+          text-5xl
+
+          font-black
+
+          text-white
+        "
+      >
+        78%
+      </h3>
+
+      <div
+        className="
+          mt-8
+
+          h-3
+
+          rounded-full
+
+          bg-white/10
+        "
+      >
+
+        <div
+          className="
+            h-full
+            w-[78%]
+
+            rounded-full
+
+            bg-orange-500
+          "
+        />
+
+      </div>
+
+    </div>
+
+    {/* Card 2 */}
+    <div
+      className="
+        absolute
+
+        left-1/2
+        top-0
+
+        -translate-x-1/2
+
+        w-[370px]
+        h-[280px]
+
+        rounded-[35px]
+
+        border
+        border-white/10
+
+        bg-white/[0.06]
+
+        backdrop-blur-xl
+
+        p-8
+      "
+    >
+
+      <div className="flex justify-between items-center">
+
+        <div>
+
+          <p className="text-white/50 text-sm">
+            Active Tasks
+          </p>
+
+          <h3
+            className="
+              mt-3
+
+              text-6xl
+
+              font-black
+
+              text-white
+            "
+          >
+            24
+          </h3>
+
+        </div>
+
+        <div
+          className="
+            w-16
+            h-16
+
+            rounded-2xl
+
+            bg-orange-500/20
+
+            flex
+            items-center
+            justify-center
+          "
+        >
+
+          <span className="text-3xl">
+            ⚡
+          </span>
+
+        </div>
+
+      </div>
+
+      <div className="mt-10 flex gap-3">
+
+        <div className="flex-1 h-24 rounded-2xl bg-white/5" />
+
+        <div className="flex-1 h-24 rounded-2xl bg-orange-500/20" />
+
+      </div>
+
+    </div>
+
+    {/* Card 3 */}
+    <div
+      className="
+        absolute
+
+        right-0
+        top-10
+
+        w-[370px]
+        h-[240px]
+
+        rounded-[30px]
+
+        border
+        border-white/10
+
+        bg-white/[0.05]
+
+        backdrop-blur-xl
+
+        p-6
+      "
+    >
+
+      <p className="text-white/60 text-sm">
+        Productivity
+      </p>
+
+      <h3
+        className="
+          mt-4
+
+          text-5xl
+
+          font-black
+
+          text-white
+        "
+      >
+        +32%
+      </h3>
+
+      <div className="mt-10 space-y-3">
+
+        <div className="h-3 rounded-full bg-white/10" />
+        <div className="h-3 rounded-full bg-white/10 w-[80%]" />
+        <div className="h-3 rounded-full bg-orange-500 w-[60%]" />
+
+      </div>
+
+    </div>
 
   </div>
 
