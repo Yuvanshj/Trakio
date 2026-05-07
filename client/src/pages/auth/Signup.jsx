@@ -113,6 +113,13 @@ export default function Signup() {
     setLoading(false);
   }
 };
+  const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
+    if (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
     
@@ -228,9 +235,9 @@ export default function Signup() {
           <span className="mx-2 text-xs text-[#A1A1AA]">Or continue with</span>
           <div className="grow border-t border-[#3F3F46]" />
         </div>
-<div className="mt-3">
+  <div className="mt-3">
   <button
-    // onClick={handleGoogleLogin}
+    onClick={handleGoogleLogin}
     className="w-full flex items-center justify-center gap-2 h-10 rounded-lg border border-zinc-700 
     bg-zinc-900 text-gray-200 hover:bg-zinc-800 transition-all duration-200 text-sm"
   >
