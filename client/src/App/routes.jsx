@@ -5,7 +5,7 @@ import About from "../pages/About/About";
 import Profile from "../pages/Profile/Profile";
 import Login from "../pages/auth/Login";
 import Signup from "../pages/auth/Signup";
-
+import MobileApp from "../pages/MobileApp";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -15,6 +15,8 @@ const AppRoutes = () => {
       <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/app" element={<MobileApp />} />
+
     </Routes>
   );
 };
