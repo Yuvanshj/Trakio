@@ -32,4 +32,38 @@
   animation-direction: reverse;
 }
 
+<<<<<<< Updated upstream
 
+=======
+.connect-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.connect-marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  width: max-content;
+
+  animation: connectScroll 20s linear infinite;
+  transition: all 0.5s ease;
+}
+
+@keyframes connectScroll {
+
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+.group:hover .connect-marquee-content {
+  animation-duration: 20s;
+  cursor: pointer;
+}
+>>>>>>> Stashed changes
