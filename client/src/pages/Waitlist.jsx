@@ -2,6 +2,7 @@ import { useState } from 'react';
 import trakioLogo from '../Assets/Images/icons/TrakioLogo.png';
 import { SiSupabase, SiReact, SiNodedotjs, SiExpress } from 'react-icons/si';
 import mobileViewImg from '../Assets/Images/Mobile View Request.png';
+import ShinyText from '../Components/ShinyText/ShinyText';
 
 const Waitlist = () => {
   const [email, setEmail] = useState('');
@@ -32,12 +33,12 @@ const Waitlist = () => {
         </h1>
       </div>
 
-      <div className="h-full w-full max-w-screen-2xl mx-auto px-6 flex flex-col justify-start relative z-10">
+      <div className="h-full w-full max-w-screen-2xl mx-auto px-6 lg:px-12 xl:px-16 flex flex-col justify-start relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full pt-10 lg:pt-12">
           
           {/* Left Side */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl">
-            <div className="mb-6 relative group inline-block">
+            <div className="mb-3 relative group inline-block">
               <img
                 src={trakioLogo}
                 alt="Trakio Logo"
@@ -45,14 +46,21 @@ const Waitlist = () => {
               />
             </div>
 
-            <div className="mb-6 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+            <div className="mb-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
               <p className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-gray-200">
                 Early Access Available
               </p>
             </div>
 
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 tracking-tight text-white leading-[1.1]">
-              Join the waitlist
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 tracking-tight leading-[1.1]">
+              <ShinyText 
+                text="Join the waitlist" 
+                disabled={false} 
+                speed={3} 
+                className="" 
+                color="#b5b5b5" 
+                shineColor="#ffffff" 
+              />
             </h1>
 
             <p className="text-gray-300 text-lg sm:text-2xl max-w-lg mb-8 font-medium leading-relaxed">
