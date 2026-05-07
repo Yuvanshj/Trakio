@@ -5,5 +5,6 @@ export default function Home() {
     <main className="bg-black">
       <HeroSection />
     </main>
+
   );
 }
