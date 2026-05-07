@@ -2,7 +2,7 @@ import {
   FaCircle,
   FaMapMarkerAlt,
   FaSchool,
-  FaUserGraduate,
+  
 } from "react-icons/fa";
 
 const Track = () => {
