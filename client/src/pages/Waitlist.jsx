@@ -21,7 +21,7 @@ const Waitlist = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white font-sans selection:bg-white/20 flex flex-col justify-start pt-8 lg:pt-10">
+    <div className="relative w-full h-[calc(100dvh-4.25rem)] overflow-hidden bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white font-sans selection:bg-white/20 flex flex-col justify-start pt-8 lg:pt-10">
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col items-center justify-center select-none opacity-80">
         <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">
           THE TRAKIO
@@ -79,11 +79,11 @@ const Waitlist = () => {
                 type="submit"
                 className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 whitespace-nowrap flex items-center justify-center text-lg ${
                   joined
-                    ? 'bg-[#111] text-green-400 border border-green-500/30'
+                    ? 'bg-[#111827]/80 text-green-300 border border-green-400/20backdrop-blur-md shadow-[0_0_20px_rgba(74,222,128,0.08)] hover:border-green-400/40 transition-all duration-300'
                     : 'bg-white text-black hover:bg-gray-200 active:scale-95'
                 }`}
               >
-                {joined ? "You're on the list!" : 'Join waitlist'}
+                {joined ? "Joined the Waitlist!" : 'Join waitlist'}
               </button>
             </form>
 
@@ -126,7 +126,7 @@ const Waitlist = () => {
 
           {/* Right Side */}
           <div
-            className="flex-1 flex justify-center lg:justify-end w-full lg:w-auto perspective-[2000px] h-[60vh] sm:h-[70vh] lg:h-[80vh]"
+            className="flex-1 flex justify-center lg:justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[60vh] sm:h-[70vh] lg:h-[80vh]"
             style={{ maxHeight: '800px' }}
           >
             <div
@@ -134,17 +134,8 @@ const Waitlist = () => {
               style={{ aspectRatio: '9 / 19' }}
             >
               <div
-                className="relative w-full h-full bg-black rounded-[2.5rem] sm:rounded-[3rem] border border-[#111] overflow-hidden ring-1 ring-white/20 z-10 flex flex-col"
-                style={{ borderWidth: '6px' }}
+                className="relative w-full h-full bg-[#050505] rounded-[2.2rem] sm:rounded-[2.8rem] border border-white/10 overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_30px_90px_rgba(0,0,0,0.65),0_0_40px_rgba(255,255,255,0.08)] z-10 flex flex-col"
               >
-                <div className="absolute top-0 inset-x-0 h-7 sm:h-8 flex justify-center z-50 pointer-events-none">
-                  <div className="w-28 sm:w-36 h-6 sm:h-7 bg-[#111] rounded-b-3xl relative">
-                    <div className="absolute right-3 sm:right-4 top-1.5 w-3 h-3 rounded-full bg-black/80 border border-white/5 flex items-center justify-center">
-                      <div className="w-1 h-1 rounded-full bg-blue-500/20" />
-                    </div>
-                  </div>
-                </div>
-
                 <div className="flex-1 bg-black w-full h-full relative overflow-hidden">
                   <div className="absolute inset-0 bg-[#0a0a0a] animate-pulse -z-10" />
 
@@ -153,10 +144,6 @@ const Waitlist = () => {
                     alt="Trakio Mobile App Preview"
                     className="w-full h-full object-cover"
                   />
-
-                  <div className="absolute bottom-2 inset-x-0 flex justify-center pointer-events-none z-50">
-                    <div className="w-32 sm:w-40 h-1.5 bg-white/30 rounded-full" />
-                  </div>
                 </div>
               </div>
             </div>
