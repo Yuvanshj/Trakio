@@ -34,11 +34,14 @@ const children = [
 export default function ChildrenCards() {
   return (
     <div className="space-y-4">
-      {children.map((child) => (
+      {children.map((child) => {
+        const seed = child.name.replace(/\s+/g, "_").toLowerCase();
+        const avatar = `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(seed)}&scale=80`;
+        return (
         <article key={child.name} className="rounded-lg border border-gray-200 p-4 hover:border-gray-300 transition-colors">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex items-start gap-3">
-              <img src={child.photo} alt={child.name} className="h-14 w-14 rounded-lg object-cover" />
+              <img src={avatar} alt={child.name} className="h-14 w-14 rounded-lg object-cover bg-white" />
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">{child.name}</h3>
                 <p className="text-sm text-gray-600">
@@ -78,7 +81,8 @@ export default function ChildrenCards() {
             <p>{child.timings}</p>
           </div>
         </article>
-      ))}
+      );
+      })}
     </div>
   );
 }
