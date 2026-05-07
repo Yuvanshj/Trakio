@@ -9,9 +9,8 @@ export default function TeamMemberCard({
 
   return (
     <div
-      onClick={() =>
-        setActiveCard(isActive ? null : member.id)
-      }
+      onMouseEnter={() => setActiveCard(member.id)}
+      onMouseLeave={() => setActiveCard(null)}
 
       className={`
         group
@@ -28,8 +27,8 @@ export default function TeamMemberCard({
 
         ${
           isActive
-            ? "h-155 scale-105"
-            : "h-125"
+            ? "h-180 scale-105"
+            : "h-140"
         }
 
         ${
