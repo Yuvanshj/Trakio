@@ -22,7 +22,7 @@ export default function HeroSection() {
           px-6
           md:px-10
 
-          pt-32
+          pt-12
           pb-20
         "
       >
@@ -147,7 +147,7 @@ export default function HeroSection() {
 
 
       {/* Bus and Floating Cards Section */}
-      <div className="relative mt-16 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[500px]">
+      <div className="relative -mt-64 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[500px] z-20">
         
         {/* Dashed line and dots */}
         <div className="absolute bottom-20 w-[80%] h-[120px] rounded-[100%] border-2 border-dashed border-black/10 z-0"></div>
