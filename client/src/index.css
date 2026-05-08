@@ -1,4 +1,7 @@
 @import "tailwindcss";
+.no-scroll-x, html, body {
+  overflow-x: hidden;
+}
 .marquee {
   overflow: hidden;
   width: 100%;
