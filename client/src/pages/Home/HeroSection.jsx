@@ -44,7 +44,7 @@ export default function HeroSection() {
 
               font-black
 
-              leading-[0.9]
+              leading-[1.05]
 
               tracking-[-5px]
 

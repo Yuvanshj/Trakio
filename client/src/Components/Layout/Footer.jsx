@@ -99,7 +99,7 @@ export default function Footer() {
         <ScrollVelocity
           texts={["TRAKIO"]}
           velocity={120}
-          className="text-[18vw] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-white/40 to-white/5 drop-shadow-2xl inline-block px-2"
+          className="text-[18vw] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-white/20 to-white/3 drop-shadow-xl inline-block px-2 opacity-60"
         />
       </div>
 
