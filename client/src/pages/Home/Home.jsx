@@ -8,6 +8,7 @@ export default function Home() {
       <HeroSection />
       <TrustSection/>
       <Footer />
+      
 
     </main>
   );
