@@ -62,9 +62,14 @@ const handleGoogleLogin = async () => {
   navigate("/track");
 };
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
+    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white font-sans relative overflow-hidden">
 
-      <div className="relative w-full max-w-md rounded-xl bg-zinc-900 p-8 shadow-2xl border border-red-800 backdrop-blur-md">
+      {/* Giant Faded Background Text */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col items-center justify-center select-none opacity-80">
+        <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">TRAKIO</h1>
+      </div>
+
+      <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white/5 p-10 shadow-2xl border border-white/10 backdrop-blur-md">
         
         <Link
           to="/"
@@ -100,7 +105,7 @@ const handleGoogleLogin = async () => {
             placeholder="abc@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3.5 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {emailError && <p className="text-red-400 text-xs mt-1">{emailError}</p>}
 
@@ -120,32 +125,31 @@ const handleGoogleLogin = async () => {
             placeholder="••••••••"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-3 py-3 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3.5 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {passwordError && <p className="text-red-400 text-xs mt-1">{passwordError}</p>}
 
           <button
             type="submit"
-            className="w-full mt-9 h-11 rounded-lg border border-[#3F3F46]/30 
-            bg-linear-to-b from-[#FAFAFA] to-[#E4E4E7] 
-            text-[#18181B] font-semibold shadow-sm hover:shadow-md
-            hover:from-[#EDEDED] hover:to-[#D4D4D8] 
+            className="w-full mt-9 h-12 rounded-xl border border-white/10 
+            bg-white text-black font-bold shadow-md hover:shadow-lg
+            hover:bg-gray-100 
             active:scale-95 transition-all duration-200 ease-out"
           >
             Login
           </button>
         </form>
 
-        <div className="relative flex items-center mt-5">
-          <div className="grow border-t border-[#3F3F46]" />
-          <span className="mx-3 text-xs text-[#A1A1AA]">Or continue with</span>
-          <div className="grow border-t border-[#3F3F46]" />
+        <div className="relative flex items-center mt-6">
+          <div className="grow border-t border-white/10" />
+          <span className="mx-3 text-xs text-white/30">Or continue with</span>
+          <div className="grow border-t border-white/10" />
         </div>
 <div className="mt-4">
   <button
     onClick={handleGoogleLogin}
-    className="w-full flex items-center justify-center gap-3 h-11 rounded-lg border border-zinc-700 
-    bg-zinc-900 text-gray-200 hover:bg-zinc-800 transition-all duration-200"
+    className="w-full flex items-center justify-center gap-3 h-12 rounded-xl border border-white/10 
+    bg-white/5 text-white hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
   >
     <img
       src="https://www.svgrepo.com/show/475656/google-color.svg"

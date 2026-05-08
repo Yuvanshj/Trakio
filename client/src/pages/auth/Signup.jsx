@@ -121,9 +121,14 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white-950 text-white font-sans relative overflow-hidden">
-    
-      <div className="relative w-full max-w-md rounded-xl bg-zinc-900 p-5 shadow-2xl border border-zinc-800 backdrop-blur-md">
+    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white font-sans relative overflow-hidden">
+
+      {/* Giant Faded Background Text */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col items-center justify-center select-none opacity-80">
+        <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">TRAKIO</h1>
+      </div>
+
+      <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white/5 p-8 shadow-2xl border border-white/10 backdrop-blur-md">
         
         <Link
           to="/"
@@ -156,7 +161,7 @@ export default function Signup() {
             placeholder="Shresth Juyal"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {nameError && <p className="text-red-400 text-xs mt-1">{nameError}</p>}
 
@@ -170,7 +175,7 @@ export default function Signup() {
             placeholder="abc@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {emailError && <p className="text-red-400 text-xs mt-1">{emailError}</p>}
 
@@ -184,7 +189,7 @@ export default function Signup() {
             placeholder="••••••••"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {passwordError && <p className="text-red-400 text-xs mt-1">{passwordError}</p>}
 
@@ -198,7 +203,7 @@ export default function Signup() {
             placeholder="9876543210"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {phoneError && <p className="text-red-400 text-xs mt-1">{phoneError}</p>}
 
@@ -212,39 +217,37 @@ export default function Signup() {
             placeholder="123 Main Street, City"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            className="w-full rounded-md bg-zinc-900 border border-zinc-800 px-2 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all"
           />
           {addressError && <p className="text-red-400 text-xs mt-1">{addressError}</p>}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-5 h-10 rounded-lg border border-[#3F3F46]/30 
-            bg-linear-to-b from-[#FAFAFA] to-[#E4E4E7] 
-            text-[#18181B] font-semibold text-sm shadow-sm hover:shadow-md
-            hover:from-[#EDEDED] hover:to-[#D4D4D8] 
+            className="w-full mt-6 h-12 rounded-xl border border-white/10 
+            bg-white text-black font-bold shadow-md hover:shadow-lg
+            hover:bg-gray-100 
             active:scale-95 transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed"
-        
           >
             {loading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
 
-        <div className="relative flex items-center mt-4">
-          <div className="grow border-t border-[#3F3F46]" />
-          <span className="mx-2 text-xs text-[#A1A1AA]">Or continue with</span>
-          <div className="grow border-t border-[#3F3F46]" />
+        <div className="relative flex items-center mt-5">
+          <div className="grow border-t border-white/10" />
+          <span className="mx-3 text-xs text-white/30">Or continue with</span>
+          <div className="grow border-t border-white/10" />
         </div>
-  <div className="mt-3">
+  <div className="mt-4">
   <button
     onClick={handleGoogleLogin}
-    className="w-full flex items-center justify-center gap-2 h-10 rounded-lg border border-zinc-700 
-    bg-zinc-900 text-gray-200 hover:bg-zinc-800 transition-all duration-200 text-sm"
+    className="w-full flex items-center justify-center gap-3 h-12 rounded-xl border border-white/10 
+    bg-white/5 text-white hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
   >
     <img
       src="https://www.svgrepo.com/show/475656/google-color.svg"
       alt="google"
-      className="w-4 h-4"
+      className="w-5 h-5"
     />
     Continue with Google
   </button>
