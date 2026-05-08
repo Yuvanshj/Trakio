@@ -330,28 +330,6 @@ export default function TrustSection() {
                   "
                 >
 
-                  {index !== steps.length - 1 && (
-
-                    <div
-                      className="
-                        hidden
-                        lg:block
-
-                        absolute
-
-                        top-12
-                        left-[85%]
-
-                        w-full
-
-                        border-t
-                        border-dashed
-                        border-black/20
-                      "
-                    />
-
-                  )}
-
                   <div
                     className="
                       w-24
