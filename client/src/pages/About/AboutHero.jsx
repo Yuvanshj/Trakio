@@ -14,21 +14,21 @@ export default function AboutHero() {
     {
       id: 1,
       name: "Yashaswi Gusain",
-      role: "",
+      role: "Buttplug User",
       image: Yash,
       about: "Passionate about crafting immersive frontend experiences and modern UI systems.",
     },
     {
       id: 2,
       name: "Shresth Juyal",
-      role: "The Real Buttplug",
+      role: "Buttplug Engineer",
       image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },
     {
       id: 3,
       name: "Yuvansh Juneja",
-      role: "Jiske Muh Mai Buttplug Hai",
+      role: "Buttplug Designer",
       image: Yuvi,
       about:"Designs elegant user experiences with strong attention to detail and storytelling.",
     }
