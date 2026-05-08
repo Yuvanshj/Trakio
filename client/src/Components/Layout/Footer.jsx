@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-black text-white pt-8 pb-0 border-t border-white/10">
       
-      {/* Crazy Gandfaad Gradient Orbs */}
       <div className="absolute -top-[30%] -left-[10%] w-[60vw] h-[60vw] bg-purple-600/40 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }} />
       <div className="absolute top-[20%] -right-[20%] w-[70vw] h-[70vw] bg-blue-600/30 rounded-full mix-blend-screen filter blur-[150px] opacity-50 animate-pulse pointer-events-none" style={{ animationDuration: '7s' }} />
       <div className="absolute -bottom-[40%] left-[20%] w-[80vw] h-[80vw] bg-orange-600/20 rounded-full mix-blend-screen filter blur-[150px] opacity-60 animate-pulse pointer-events-none" style={{ animationDuration: '5s' }} />

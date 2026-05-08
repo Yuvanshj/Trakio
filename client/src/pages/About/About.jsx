@@ -11,7 +11,6 @@ export default function About() {
         <ConnectBanner/>
         <FeedbackSection />
       </div>
-      <Footer />
     </div>
   );
 }
