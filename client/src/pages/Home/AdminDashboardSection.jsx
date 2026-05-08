@@ -1,3 +1,5 @@
+import dashboardImage from "../../assets/Images/image.png";
+
 export default function AdminDashboardSection() {
 
   return (
@@ -97,10 +99,9 @@ export default function AdminDashboardSection() {
               rounded-[40px]
               mr-15
 
-              border
-              border-white/10
+              
 
-              bg-white
+              bg-black
 
               p-6
 
@@ -111,21 +112,36 @@ export default function AdminDashboardSection() {
           >
 
             <div
-              className="
-                flex
-                items-center
-                justify-center
+  className="
+    mt-10
 
-                h-full
+    overflow-hidden
 
-                text-black/30
+    rounded-[30px]
 
-                text-xl
+    border
+    border-black/5
+  "
+>
 
-                font-medium
-              "
-            >
-            </div>
+  <img
+    src={dashboardImage}
+    alt="Dashboard Preview"
+
+    className="
+      w-auto
+      h-auto
+    
+      object-cover
+
+      transition-all
+      duration-700
+
+      hover:scale-[1.02]
+    "
+  />
+
+</div>
 
           </div>
 
