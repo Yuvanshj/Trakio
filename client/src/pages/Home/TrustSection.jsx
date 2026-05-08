@@ -239,8 +239,8 @@ export default function TrustSection() {
 
       <div
         className="
-          border-t
-          border-black
+          border-0
+          border-red-500
           bg-white
         "
       >
@@ -253,11 +253,11 @@ export default function TrustSection() {
             px-6
             md:px-10
 
-            py-24
+        py-10
           "
         >
 
-          <div className="text-center">
+          <div className="text-center py-10 px-0">
 
             <p
               className="
