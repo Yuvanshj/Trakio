@@ -37,47 +37,48 @@ export default function ChildrenCards() {
       {children.map((child) => {
         const seed = child.name.replace(/\s+/g, "_").toLowerCase();
         const avatar = `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(seed)}&scale=80`;
+        const isOnBus = child.status.toLowerCase().includes("on bus");
         return (
-        <article key={child.name} className="border border-black/10 bg-white p-4 text-[#111] shadow-sm transition-colors hover:border-black/20">
+        <article key={child.name} className="rounded-2xl border border-white/10 bg-[#0f0f0f] p-4 text-white shadow-sm backdrop-blur-sm transition-colors hover:border-white/20">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex items-start gap-3">
-              <img src={avatar} alt={child.name} className="h-14 w-14 border border-black/10 bg-black/5 object-cover" />
+              <img src={avatar} alt={child.name} className="h-14 w-14 rounded-full border border-white/10 bg-black/5 object-cover" />
               <div className="flex-1">
-                <h3 className="font-semibold text-[#111]">{child.name}</h3>
-                <p className="text-sm text-black/65">
+                <h3 className="font-semibold text-white">{child.name}</h3>
+                <p className="text-sm text-white/60">
                   {child.className} · {child.section}
                 </p>
-                <span className="mt-2 inline-block border border-emerald-300 bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                <span className={`mt-2 inline-block rounded-full px-2.5 py-1 text-xs font-medium ${isOnBus ? "border border-emerald-500/20 bg-emerald-500/10 text-emerald-300" : "border border-sky-500/20 bg-sky-500/10 text-sky-300"}`}>
                   {child.status}
                 </span>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-xs text-black/45">ETA</p>
-              <p className="mt-1 font-semibold text-[#111]">{child.liveETA}</p>
+              <p className="text-xs text-white/45">ETA</p>
+              <p className="mt-1 font-semibold text-white">{child.liveETA}</p>
             </div>
           </div>
 
           <div className="mt-4 grid gap-3 grid-cols-2 sm:grid-cols-4">
-            <div className="border border-black/10 bg-black/5 p-3">
-              <p className="text-xs text-black/45">Bus</p>
-              <p className="mt-1 text-sm font-medium text-[#111]">{child.busNumber}</p>
+            <div className="rounded-xl border border-white/10 bg-[#131313] p-3">
+              <p className="text-xs text-white/45">Bus</p>
+              <p className="mt-1 text-sm font-medium text-white">{child.busNumber}</p>
             </div>
-            <div className="border border-black/10 bg-black/5 p-3">
-              <p className="text-xs text-black/45">Route</p>
-              <p className="mt-1 text-sm font-medium text-[#111]">{child.route.split(" ")[0]}</p>
+            <div className="rounded-xl border border-white/10 bg-[#131313] p-3">
+              <p className="text-xs text-white/45">Route</p>
+              <p className="mt-1 text-sm font-medium text-white">{child.route.split(" ")[0]}</p>
             </div>
-            <div className="border border-black/10 bg-black/5 p-3">
-              <p className="text-xs text-black/45">Pickup</p>
-              <p className="mt-1 text-sm font-medium text-[#111]">{child.pickup}</p>
+            <div className="rounded-xl border border-white/10 bg-[#131313] p-3">
+              <p className="text-xs text-white/45">Pickup</p>
+              <p className="mt-1 text-sm font-medium text-white">{child.pickup}</p>
             </div>
-            <div className="border border-black/10 bg-black/5 p-3">
-              <p className="text-xs text-black/45">Drop</p>
-              <p className="mt-1 text-sm font-medium text-[#111]">{child.drop.split(" ")[0]}</p>
+            <div className="rounded-xl border border-white/10 bg-[#131313] p-3">
+              <p className="text-xs text-white/45">Drop</p>
+              <p className="mt-1 text-sm font-medium text-white">{child.drop.split(" ")[0]}</p>
             </div>
           </div>
 
-          <div className="mt-3 flex gap-2 text-xs text-black/55">
+          <div className="mt-3 flex gap-2 text-xs text-white/55">
             <p>{child.timings}</p>
           </div>
         </article>

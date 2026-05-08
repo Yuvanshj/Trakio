@@ -8,32 +8,16 @@ import profileIcon from "../../Assets/Images/icons/profileIcon.png";
 const Navbar = () => {
   const [user, setUser] = useState(null);
   const location = useLocation();
-  const isWaitlistPage = location.pathname === "/waitlist";
   const isAboutPage = location.pathname === "/about";
 
   useEffect(() => {
-    //Here im getting the current User from the data
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
     });
-    //Here im creating Auth Listener
-    //It continuously watches:
-    // login
-    // logout
-    // session refresh
-    const { data: listener } =
-      supabase.auth.onAuthStateChange(
-     //This function runs whenever auth changes.
-        (_, session) => {
-          // If session exists → get user
-          // Else → undefined
-          setUser(session ? session.user : null);
-        }
-      );
-      //CLEANUP FUNCTION
-      //Without cleanup:
-      // Every time component mounts:
-      // new listener gets added
+    const { data: listener } = supabase.auth.onAuthStateChange((_, session) => {
+      setUser(session ? session.user : null);
+    });
+
     return () => {
       listener.subscription.unsubscribe();
     };
@@ -56,9 +40,10 @@ const Navbar = () => {
             className="h-14 md:h-16 w-auto"
           />
         </Link>
-<p className={`text-xl font-bold tracking-tight items-center justify-between mb-2 ${isAboutPage ? "text-black" : "text-white"}`}>
-  Trakio
-</p>      </div>
+        <p className={`text-xl font-bold tracking-tight mb-2 ${isAboutPage ? "text-black" : "text-white"}`}>
+          Trakio
+        </p>
+      </div>
 
       <div className="flex-3 flex items-center justify-center">
         <div className="bg-zinc-900 rounded-full px-6 py-1.5 flex items-center gap-4 shadow-md backdrop-blur-lg border border-white/20">
