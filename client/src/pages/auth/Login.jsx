@@ -62,14 +62,17 @@ const handleGoogleLogin = async () => {
   navigate("/track");
 };
   return (
-    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-[#0b0b0b] via-black to-[#040404] text-white font-sans relative overflow-hidden">
+    <div className="flex min-h-screen items-center justify-center bg-black text-white font-sans relative overflow-hidden">      
+      {/* Animated Gradient Orbs */}
+      <div className="absolute top-1/4 -left-[30%] w-[50vw] h-[50vw] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }} />
+      <div className="absolute top-1/3 -right-[35%] w-[60vw] h-[60vw] bg-blue-600/15 rounded-full mix-blend-screen filter blur-[150px] opacity-25 animate-pulse pointer-events-none" style={{ animationDuration: '7s' }} />
+      <div className="absolute -bottom-[30%] left-1/2 w-[70vw] h-[70vw] bg-indigo-600/10 rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-pulse pointer-events-none" style={{ animationDuration: '5s' }} />
 
-      {/* Giant Faded Background Text */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 flex flex-col items-center justify-center select-none opacity-80">
         <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">TRAKIO</h1>
       </div>
 
-      <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white/5 p-10 shadow-2xl border border-white/10 backdrop-blur-md">
+      <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white/10 p-10 shadow-2xl border border-white/20 backdrop-blur-xl">
         
         <Link
           to="/"
