@@ -14,21 +14,21 @@ export default function AboutHero() {
     {
       id: 1,
       name: "Yashaswi Gusain",
-      role: "Talwinder God",
+      role: ".",
       image: Yash,
       about: "Passionate about crafting immersive frontend experiences and modern UI systems.",
     },
     {
       id: 2,
       name: "Shresth Juyal",
-      role: "Yashaswi's Son",
+      role: ".",
       image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },
     {
       id: 3,
       name: "Yuvansh Juneja",
-      role: "Yashaswi's Tatta",
+      role: ".",
       image: Yuvi,
       about:"Designs elegant user experiences with strong attention to detail and storytelling.",
     }
