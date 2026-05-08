@@ -1,5 +1,5 @@
 import RollingText from "../../Components/RollingText";
-import ShinyText from "../../Components/ShinyText/ShinyText";
+// import ShinyText from "../../Components/ShinyText/ShinyText";
 
 export default function FeedbackSection() {
   const testimonials = [
