@@ -13,51 +13,55 @@ import {
 export default function TrustSection() {
 
   const stats = [
-  {
-    icon: School,
-    number: "500+",
-    label: "Schools Trust Us",
-  },
+    {
+      icon: School,
+      number: "500+",
+      label: "Schools Trust Us",
+    },
 
-  {
-    icon: Smile,
-    number: "50K+",
-    label: "Happy Parents",
-  },
+    {
+      icon: Smile,
+      number: "50K+",
+      label: "Happy Parents",
+    },
 
-  {
-    icon: BusFront,
-    number: "1200+",
-    label: "Buses Tracked",
-  },
+    {
+      icon: BusFront,
+      number: "1200+",
+      label: "Buses Tracked",
+    },
 
-  {
-    icon: Timer,
-    number: "99.9%",
-    label: "Uptime",
-  },
-];
+    {
+      icon: Timer,
+      number: "99.9%",
+      label: "Uptime",
+    },
+  ];
 
   const steps = [
     {
+      icon: MapPinCheck,
       number: "1",
       title: "Live Tracking",
       desc: "Track the live location of every bus in real-time.",
     },
 
     {
+      icon: OctagonAlert,
       number: "2",
       title: "Instant Alerts",
       desc: "Get notified instantly for boarding, arrival & delays.",
     },
 
     {
+      icon: ShieldCheck,
       number: "3",
       title: "Safe Journeys",
       desc: "Ensuring every child reaches safely, every time.",
     },
 
     {
+      icon: BarChart3,
       number: "4",
       title: "Smart Reports",
       desc: "Schools get smart insights and transport reports.",
@@ -105,23 +109,23 @@ export default function TrustSection() {
             </p>
 
             <h2
-  className="
-    mt-6
+              className="
+                mt-6
 
-    max-w-[500px]
+                max-w-[500px]
 
-    text-5xl
-    md:text-6xl
+                text-5xl
+                md:text-6xl
 
-    font-black
+                font-black
 
-    leading-[1]
+                leading-[1]
 
-     tracking-[-3.5px]
+                tracking-[-3.5px]
 
-    text-white
-  "
->
+                text-white
+              "
+            >
               Built for Safety.
               <br />
               Designed for Trust.
@@ -131,7 +135,7 @@ export default function TrustSection() {
               className="
                 mt-6
 
-                text-black/50
+                text-white/50
 
                 leading-8
               "
@@ -147,89 +151,85 @@ export default function TrustSection() {
               lg:col-span-4
               flex
 
-           
-
               gap-10
             "
           >
 
-            {stats.map((item, index) => (
+            {stats.map((item, index) => {
 
-              <div
-                key={index}
-                className="
-                  flex
-                  flex-col
-                  items-center
-                  text-center
-                "
-              >
+              const Icon = item.icon;
+
+              return (
 
                 <div
+                  key={index}
                   className="
-                    w-20
-                    h-20
-
-                    rounded-[24px]
-
-                    border
-                    border-black/10
-
-                    bg-white
-
                     flex
+                    flex-col
                     items-center
-                    justify-center
-
-                    mb-6
-
-                    shadow-sm
+                    text-center
                   "
                 >
-                  
-                    {(() => {
 
-  const Icon = item.icon;
+                  <div
+                    className="
+                      w-20
+                      h-20
 
-  return (
-    <Icon
-      size={36}
-      strokeWidth={2}
-      className="text-black"
-    />
-  );
+                      rounded-[24px]
 
-})()}
+                      border
+                      border-black/10
+
+                      bg-white
+
+                      flex
+                      items-center
+                      justify-center
+
+                      mb-6
+
+                      shadow-sm
+                    "
+                  >
+
+                    <Icon
+                      size={36}
+                      strokeWidth={2}
+                      className="text-black"
+                    />
+
+                  </div>
+
+                  <h3
+                    className="
+                      text-5xl
+
+                      font-black
+
+                      tracking-[-2px]
+
+                      text-white
+                    "
+                  >
+                    {item.number}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-3
+
+                      text-white
+                    "
+                  >
+                    {item.label}
+                  </p>
 
                 </div>
 
-                <h3
-                  className="
-                    text-5xl
+              );
 
-                    font-black
-
-                    tracking-[-2px]
-
-                    text-white
-                  "
-                >
-                  {item.number}
-                </h3>
-
-                <p
-                  className="
-                    mt-3
-
-                    text-white 
-                  "
-                >
-                  {item.label}
-                </p>
-
-              </div>
-
-            ))}
+            })}
 
           </div>
 
@@ -267,7 +267,7 @@ export default function TrustSection() {
 
                 text-xs
 
-                text-white
+                text-black/40
               "
             >
               How It Works
@@ -306,114 +306,129 @@ export default function TrustSection() {
             "
           >
 
-            {steps.map((step, index) => (
+            {steps.map((step, index) => {
 
-              <div
-                key={index}
-                className="
+              const Icon = step.icon;
+
+              return (
+
+                <div
+                  key={index}
+                  className="
                     flex
                     flex-col
                     items-center
                     text-center
-                  mx-auto
+                    mx-auto
 
-                  group
-
-
-                  transition-all
-                  duration-500
-
-                  hover:-translate-y-2
-                "
-              >
-
-                {index !== steps.length - 1 && (
-
-                  <div
-                    className="
-                      hidden
-                      lg:block
-
-                      absolute
-
-                      top-12
-                      left-[85%]
-
-                      w-full
-
-                      border-t
-                      border-dashed
-                      border-black/20
-                    "
-                  />
-
-                )}
-
-                <div
-                  className="
-                    w-24
-                    h-24
-
-                    rounded-[28px]
-
-                    border
-                    border-black/10
-
-                    bg-white
-
-                    flex
-                    items-center
-                    justify-center
-
-                    text-3xl
-
-                    shadow-sm
+                    group
 
                     transition-all
                     duration-500
 
-                    group-hover:scale-110
+                    hover:-translate-y-2
                   "
                 >
-                  •
-                </div>
 
-                <div className="mt-8">
+                  {index !== steps.length - 1 && (
 
-                  <div className="flex items-center gap-3 text-center justify-center">
-
-                    
-                    <h3
+                    <div
                       className="
-                        text-2xl
+                        hidden
+                        lg:block
 
-                        font-bold
+                        absolute
 
-                        text-[#111]
+                        top-12
+                        left-[85%]
+
+                        w-full
+
+                        border-t
+                        border-dashed
+                        border-black/20
                       "
-                    >
-                      {step.title}
-                    </h3>
+                    />
+
+                  )}
+
+                  <div
+                    className="
+                      w-24
+                      h-24
+
+                      rounded-[28px]
+
+                      border
+                      border-black/10
+
+                      bg-white
+
+                      flex
+                      items-center
+                      justify-center
+
+                      shadow-sm
+
+                      transition-all
+                      duration-500
+
+                      group-hover:scale-110
+                    "
+                  >
+
+                    <Icon
+                      size={38}
+                      strokeWidth={2}
+                      className="
+                        text-[#111]
+
+                        transition-all
+                        duration-500
+
+                        group-hover:scale-110
+                      "
+                    />
 
                   </div>
 
-                  <p
-                    className="
-                      mt-5
+                  <div className="mt-8">
 
-                      text-black/50
+                    <div className="flex items-center gap-3 text-center justify-center">
 
-                      leading-8
-                    "
-                  >
-                    {step.desc}
-                  </p>
+                      <h3
+                        className="
+                          text-2xl
+
+                          font-bold
+
+                          text-[#111]
+                        "
+                      >
+                        {step.title}
+                      </h3>
+
+                    </div>
+
+                    <p
+                      className="
+                        mt-5
+
+                        text-black/50
+
+                        leading-8
+                      "
+                    >
+                      {step.desc}
+                    </p>
+
+                  </div>
 
                 </div>
 
-              </div>
+              );
 
-            ))}
+            })}
 
           </div>
 
