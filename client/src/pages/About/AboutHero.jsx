@@ -1,6 +1,6 @@
 import TeamMemberCard from "./TeamMemberCard";
 import Yuvi from "../../Assets/team/Yuvi.png";
-import Yash from "../../Assets/team/Yash.jpeg";
+import Yash from "../../Assets/team/Yash.png";
 import Alien from "../../Assets/team/alien.png";
 
 import { useState } from "react";
@@ -14,21 +14,21 @@ export default function AboutHero() {
     {
       id: 1,
       name: "Yashaswi Gusain",
-      role: "Buttplug User",
+      role: "UI/UX Lead",
       image: Yash,
       about: "Passionate about crafting immersive frontend experiences and modern UI systems.",
     },
     {
       id: 2,
       name: "Shresth Juyal",
-      role: "Buttplug Engineer",
+      role: "Backend Architect",
       image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },
     {
       id: 3,
       name: "Yuvansh Juneja",
-      role: "Buttplug Designer",
+      role: "Full Stack Developer",
       image: Yuvi,
       about:"Designs elegant user experiences with strong attention to detail and storytelling.",
     }
