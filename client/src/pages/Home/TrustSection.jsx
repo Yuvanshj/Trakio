@@ -1,26 +1,42 @@
+import {
+  School,
+  Smile,
+  BusFront,
+  Timer,
+
+  MapPinCheck,
+  OctagonAlert,
+  ShieldCheck,
+  BarChart3,
+} from "lucide-react";
+
 export default function TrustSection() {
 
   const stats = [
-    {
-      number: "500+",
-      label: "Schools Trust Us",
-    },
+  {
+    icon: School,
+    number: "500+",
+    label: "Schools Trust Us",
+  },
 
-    {
-      number: "50K+",
-      label: "Happy Parents",
-    },
+  {
+    icon: Smile,
+    number: "50K+",
+    label: "Happy Parents",
+  },
 
-    {
-      number: "1200+",
-      label: "Buses Tracked",
-    },
+  {
+    icon: BusFront,
+    number: "1200+",
+    label: "Buses Tracked",
+  },
 
-    {
-      number: "99.9%",
-      label: "Uptime",
-    },
-  ];
+  {
+    icon: Timer,
+    number: "99.9%",
+    label: "Uptime",
+  },
+];
 
   const steps = [
     {
@@ -170,7 +186,21 @@ export default function TrustSection() {
                     shadow-sm
                   "
                 >
-                  <span className="text-3xl text-red-500">•</span>
+                  
+                    {(() => {
+
+  const Icon = item.icon;
+
+  return (
+    <Icon
+      size={36}
+      strokeWidth={2}
+      className="text-black"
+    />
+  );
+
+})()}
+
                 </div>
 
                 <h3
@@ -226,7 +256,7 @@ export default function TrustSection() {
             py-24
           "
         >
-{/* jadajndakjndakjndakjdnakjdnakjdnawkdbnawkbdnakdn */}
+
           <div className="text-center">
 
             <p
@@ -281,9 +311,14 @@ export default function TrustSection() {
               <div
                 key={index}
                 className="
-                  relative
+                    flex
+                    flex-col
+                    items-center
+                    text-center
+                  mx-auto
 
                   group
+
 
                   transition-all
                   duration-500
@@ -345,30 +380,9 @@ export default function TrustSection() {
 
                 <div className="mt-8">
 
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 text-center justify-center">
 
-                    <div
-                      className="
-                        w-8
-                        h-8
-
-                        rounded-full
-
-                        bg-black
-
-                        flex
-                        items-center
-                        justify-center
-
-                        text-white
-                        text-sm
-
-                        font-semibold
-                      "
-                    >
-                      {step.number}
-                    </div>
-
+                    
                     <h3
                       className="
                         text-2xl
