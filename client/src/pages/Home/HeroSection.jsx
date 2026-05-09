@@ -1,4 +1,5 @@
 import heroBusImage from "../../Assets/bus ki photu/Bus Extraction Request May 8 2026.png";
+import { MapPin, ShieldCheck, Bell } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -100,6 +101,40 @@ export default function HeroSection() {
 
       {/* Bus and Floating Cards Section */}
       <div className="relative -mt-44 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[500px] z-20">
+        
+        {/* Floating Notification 1 - Arriving */}
+        <div className="absolute top-[40%] left-[2%] md:left-[5%] lg:left-[15%] z-30 hidden sm:flex transform -translate-y-1/2 items-center gap-3 rounded-2xl bg-white/70 backdrop-blur-md px-4 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-black/5 transition-transform duration-500 hover:scale-105">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+            <MapPin size={20} className="text-green-600" />
+          </div>
+          <div className="text-left">
+            <p className="text-sm font-bold text-[#111]">Arriving in 2 mins</p>
+            <p className="text-xs font-medium text-black/50">Stop: Maple Street</p>
+          </div>
+        </div>
+
+        {/* Floating Notification 2 - Boarded */}
+        <div className="absolute bottom-[25%] right-[2%] md:right-[5%] lg:right-[15%] z-30 hidden sm:flex items-center gap-3 rounded-2xl bg-white/70 backdrop-blur-md px-4 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-black/5 transition-transform duration-500 hover:scale-105">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
+            <ShieldCheck size={20} className="text-blue-600" />
+          </div>
+          <div className="text-left">
+            <p className="text-sm font-bold text-[#111]">Boarding Complete</p>
+            <p className="text-xs font-medium text-black/50">All students safe</p>
+          </div>
+        </div>
+
+        {/* Floating Notification 3 - Alert */}
+        <div className="absolute top-[25%] right-[5%] md:right-[12%] lg:right-[20%] z-30 hidden md:flex items-center gap-3 rounded-2xl bg-white/70 backdrop-blur-md px-4 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-black/5 transition-transform duration-500 hover:scale-105">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100">
+            <Bell size={20} className="text-yellow-600" />
+          </div>
+          <div className="text-left">
+            <p className="text-sm font-bold text-[#111]">Route Alert</p>
+            <p className="text-xs font-medium text-black/50">Minor traffic delay</p>
+          </div>
+        </div>
+
         {/* Bus Image */}
         <img 
           src={heroBusImage} 
