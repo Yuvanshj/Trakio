@@ -2,6 +2,7 @@ import HeroSection from "./HeroSection";
 import Footer from "../../Components/Layout/Footer";
 import TrustSection from "./TrustSection";
 import AdminDashboardSection from "./AdminDashboardSection";
+import FinalCTASection from "./FinalCTASection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <TrustSection/>
       <AdminDashboardSection />
+      <FinalCTASection />
       <Footer />
 
       
