@@ -1,4 +1,5 @@
 import dashboardImage from "../../Assets/Images/image.png";
+import ShinyText from "../../Components/ShinyText/ShinyText";
 
 export default function AdminDashboardSection() {
 
@@ -67,9 +68,9 @@ export default function AdminDashboardSection() {
                 text-white
               "
             >
-              Complete Control.
+              <ShinyText text="Complete Control." disabled={false} speed={3} className="" />
               <br />
-              All In One Dashboard.
+              <ShinyText text="All In One Dashboard." disabled={false} speed={3} className="" />
             </h2>
 
             <p

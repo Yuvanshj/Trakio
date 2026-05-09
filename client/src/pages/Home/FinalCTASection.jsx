@@ -7,13 +7,15 @@ export default function FinalCTASection() {
 
       <div
         className="
-          max-w-1xl
+          w-[95%]
+          max-w-[1700px]
           mx-auto
 
           px-6
           md:px-10
 
-          py-24
+          pt-24
+          pb-48
         "
       >
 
@@ -164,8 +166,7 @@ export default function FinalCTASection() {
             <div
   className="
     relative
-
-    min-h-[500px]
+    min-h-[560px]
 
     overflow-hidden
   "
