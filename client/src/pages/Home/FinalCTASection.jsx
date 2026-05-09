@@ -1,3 +1,4 @@
+import childImage from "../../assets/Images/child.png";
 export default function FinalCTASection() {
 
   return (
@@ -59,7 +60,7 @@ export default function FinalCTASection() {
                   text-white
                 "
               >
-                The Trakio
+                <b>The Trakio</b> is all you need to ensure your child’s safety on the bus.
               </p>
 
               <h2
@@ -161,12 +162,56 @@ export default function FinalCTASection() {
             </div>
 
             <div
-              className="
-                min-h-[500px]
+  className="
+    relative
 
-                bg-white/5
-              "
-            />
+    min-h-[500px]
+
+    overflow-hidden
+  "
+>
+
+  <img
+    src={childImage}
+    alt="Child Looking Outside Bus"
+
+    className="
+      absolute
+      inset-0
+
+      w-full
+      h-full
+
+      object-cover
+
+      grayscale
+    "
+  />
+
+  <div
+    className="
+      absolute
+      inset-0
+
+      bg-black/40
+    "
+  />
+
+  <div
+    className="
+      absolute
+      inset-y-0
+      left-0
+
+      w-40
+
+      bg-gradient-to-r
+      from-[#0a0a0a]
+      to-transparent
+    "
+  />
+
+</div>
 
           </div>
 
