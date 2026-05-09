@@ -22,19 +22,23 @@ export default function TeamMemberCard({
         transition-all
         duration-700
 
-        w-110
+        w-full
+max-w-[340px]
+sm:max-w-[380px]
+md:max-w-[420px]
+lg:w-[440px]
         
 
         ${
           isActive
-            ? "h-180 scale-105"
-            : "h-140"
+            ? "h-[620px] md:h-[720px] scale-[1.02]"
+            : "h-[480px] md:h-[560px]"
         }
 
         ${
           index === 1
-            ? "md:translate-y-30"
-            : "md:translate-y-50"
+          ? "md:translate-y-16 lg:translate-y-30"
+          : "md:translate-y-24 lg:translate-y-50"
         }
 
         ${
@@ -79,14 +83,14 @@ export default function TeamMemberCard({
           absolute
           bottom-0
           left-0
-          p-8
+          p-5 sm:p-6 md:p-8
           text-white
           w-full
         "
       >
 
 
-        <h3 className="text-4xl font-black tracking-tight">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight">
           {member.name}
         </h3>
 

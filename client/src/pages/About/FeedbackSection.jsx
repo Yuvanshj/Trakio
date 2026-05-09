@@ -109,13 +109,13 @@ export default function FeedbackSection() {
 ];
 
   return (
-    <section className="relative bg-black py-32 overflow-hidden">
+    <section className="relative bg-black py-20 md:py-32 overflow-hidden">
 
-        <h1 className="absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[70px] sm:text-[140px] md:text-[270px] scale-x-120 text-center">
+        <h1 className="absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[40px] sm:text-[90px] md:text-[180px] lg:text-[270px] scale-x-120 text-center">
             THE TRAKIO
         </h1>
 
-        <h1 className="absolute top-[32%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[70px] sm:text-[140px] md:text-[210px] scale-x-120 text-center">
+        <h1 className="absolute top-[32%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[36px] sm:text-[80px] md:text-[150px] lg:text-[210px] scale-x-120 text-center">
         TRACKING APP
         </h1>
 
@@ -146,8 +146,10 @@ export default function FeedbackSection() {
             font-black
             leading-[0.9]
             tracking-[-4px]
-            text-[50px]
-            md:text-[90px]
+            text-[38px]
+            sm:text-[55px]
+            md:text-[75px]
+            lg:text-[90px]
             flex flex-col items-center
           "
         >
@@ -165,7 +167,7 @@ export default function FeedbackSection() {
     z-20
 
     h-full
-    w-40
+    w-12 sm:w-24 md:w-40
 
     bg-linear-to-r
     from-black
@@ -181,7 +183,7 @@ export default function FeedbackSection() {
     z-20
 
     h-full
-    w-40
+    w-12 sm:w-24 md:w-40
 
     bg-linear-to-l
     from-black
@@ -198,7 +200,10 @@ export default function FeedbackSection() {
           <div
             key={index}
             className="
-              min-w-95
+              min-w-[280px]
+sm:min-w-[340px]
+md:min-w-[380px]
+lg:min-w-[420px]
 
               bg-white/5
 
@@ -207,7 +212,7 @@ export default function FeedbackSection() {
 
               rounded-[30px]
 
-              p-8
+              p-5 sm:p-6 md:p-8
             "
           >
 
@@ -224,17 +229,27 @@ export default function FeedbackSection() {
 
 </div>
 
-<p className="text-white/80 text-lg leading-8">
+<p className="text-white/80 text-sm
+sm:text-base
+md:text-lg
+
+leading-6
+md:leading-8">
   {item.text}
 </p>
 
-            <p className="text-white/80 text-lg leading-8">
+            <p className="text-white/80 text-sm
+sm:text-base
+md:text-lg
+
+leading-6
+md:leading-8">
               {item.text}
             </p>
 
             <div className="mt-10">
 
-              <h4 className="text-white text-2xl font-bold">
+              <h4 className="text-white text-lg sm:text-xl md:text-2xl font-bold">
                 {item.name}
               </h4>
 
@@ -261,7 +276,10 @@ export default function FeedbackSection() {
           <div
             key={index}
             className="
-              min-w-95
+              min-w-[280px]
+sm:min-w-[340px]
+md:min-w-[380px]
+lg:min-w-[420px]
 
               bg-white/5
 
@@ -270,7 +288,7 @@ export default function FeedbackSection() {
 
               rounded-[30px]
 
-              p-8
+              p-5 sm:p-6 md:p-8
             "
           >
 
@@ -289,13 +307,18 @@ export default function FeedbackSection() {
 
 
 
-            <p className="text-white/80 text-lg leading-8">
+            <p className="text-white/80 text-sm
+sm:text-base
+md:text-lg
+
+leading-6
+md:leading-8">
               {item.text}
             </p>
 
             <div className="mt-10">
 
-              <h4 className="text-white text-2xl font-bold">
+              <h4 className="text-white text-lg sm:text-xl md:text-2xl font-bold">
                 {item.name}
               </h4>
 
