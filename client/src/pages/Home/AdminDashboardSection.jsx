@@ -1,4 +1,4 @@
-import dashboardImage from "../../assets/Images/image.png";
+import dashboardImage from "../../Assets/Images/image.png";
 
 export default function AdminDashboardSection() {
 
@@ -107,7 +107,7 @@ export default function AdminDashboardSection() {
 
               shadow-2xl
 
-              min-h-[500px]
+              min-h-125
             "
           >
 
