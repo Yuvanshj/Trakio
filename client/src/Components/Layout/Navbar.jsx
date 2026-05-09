@@ -71,11 +71,11 @@ const Navbar = () => {
         <button
           onClick={() => setMenuOpen((s) => !s)}
           aria-label="menu"
-          className="p-2 rounded-md bg-white/5 text-white"
+          className={`p-2 rounded-md ${isAboutPage ? "bg-gray-300/50 text-black" : "bg-white/5 text-white"}`}
         >
-          <span className="block w-5 h-0.5 bg-white mb-1" />
-          <span className="block w-5 h-0.5 bg-white mb-1" />
-          <span className="block w-5 h-0.5 bg-white" />
+          <span className={`block w-5 h-0.5 ${isAboutPage ? "bg-black" : "bg-white"} mb-1`} />
+          <span className={`block w-5 h-0.5 ${isAboutPage ? "bg-black" : "bg-white"} mb-1`} />
+          <span className={`block w-5 h-0.5 ${isAboutPage ? "bg-black" : "bg-white"}`} />
         </button>
       </div>
 

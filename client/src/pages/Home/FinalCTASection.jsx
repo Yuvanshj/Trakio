@@ -11,11 +11,11 @@ export default function FinalCTASection() {
           max-w-[1700px]
           mx-auto
 
-          px-6
+          px-4 sm:px-6
           md:px-10
 
-          pt-24
-          pb-48
+          pt-2 sm:pt-6 md:pt-24
+          pb-6 sm:pb-12 md:pb-48
         "
       >
 
@@ -46,8 +46,8 @@ export default function FinalCTASection() {
                 flex-col
                 justify-center
 
-                p-10
-                md:p-16
+                p-4 sm:p-8 md:p-10
+                lg:p-16
               "
             >
 
@@ -67,16 +67,16 @@ export default function FinalCTASection() {
 
               <h2
                 className="
-                  mt-8
+                  mt-4 sm:mt-8
 
-                  text-5xl
+                  text-3xl sm:text-5xl
                   md:text-7xl
 
                   font-black
 
                   leading-[0.95]
 
-                  tracking-[-4px]
+                  tracking-[-1px] sm:tracking-[-2px] md:tracking-[-3px] lg:tracking-[-4px]
 
                   text-white
                 "
@@ -86,13 +86,13 @@ export default function FinalCTASection() {
 
               <p
                 className="
-                  mt-8
+                  mt-4 sm:mt-8
 
                   max-w-xl
 
-                  text-lg
+                  text-sm sm:text-base md:text-lg
 
-                  leading-9
+                  leading-7 sm:leading-9
 
                   text-white
                 "
@@ -166,7 +166,7 @@ export default function FinalCTASection() {
             <div
   className="
     relative
-    min-h-[560px]
+    min-h-[300px] sm:min-h-[400px] md:min-h-[560px]
 
     overflow-hidden
   "
