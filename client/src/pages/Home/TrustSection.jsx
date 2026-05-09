@@ -253,7 +253,8 @@ export default function TrustSection() {
             px-6
             md:px-10
 
-        py-10
+            pt-10
+            pb-48
           "
         >
 
