@@ -36,7 +36,6 @@ const Waitlist = () => {
       <div className="h-full w-full max-w-screen-2xl mx-auto px-6 lg:px-12 xl:px-16 flex flex-col justify-start relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full pt-10 lg:pt-12">
           
-          {/* Left Side */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl">
             <div className="mb-3 relative group inline-block">
               <img
@@ -52,7 +51,7 @@ const Waitlist = () => {
               </p>
             </div>
 
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-4 tracking-tight leading-[1.1]">
               <ShinyText 
                 text="Join the waitlist" 
                 disabled={false} 
@@ -100,31 +99,31 @@ const Waitlist = () => {
                 Powered by
               </p>
 
-              <div className="flex gap-8 items-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 flex-wrap justify-center lg:justify-start">
-                <div className="flex items-center gap-2 group/tech cursor-pointer">
-                  <SiSupabase className="text-2xl group-hover/tech:text-emerald-500 transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">
+              <div className="flex gap-4 sm:gap-8 items-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 flex-wrap justify-center lg:justify-start">
+                <div className="flex items-center gap-1 sm:gap-2 group/tech cursor-pointer">
+                  <SiSupabase className="text-lg sm:text-2xl group-hover/tech:text-emerald-500 transition-colors" />
+                  <span className="font-bold tracking-tight text-xs sm:text-lg">
                     Supabase
                   </span>
                 </div>
 
-                <div className="flex items-center gap-2 group/tech cursor-pointer">
-                  <SiReact className="text-2xl group-hover/tech:text-blue-400 transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">
+                <div className="flex items-center gap-1 sm:gap-2 group/tech cursor-pointer">
+                  <SiReact className="text-lg sm:text-2xl group-hover/tech:text-blue-400 transition-colors" />
+                  <span className="font-bold tracking-tight text-xs sm:text-lg">
                     React
                   </span>
                 </div>
 
-                <div className="flex items-center gap-2 group/tech cursor-pointer">
-                  <SiNodedotjs className="text-2xl group-hover/tech:text-green-500 transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">
+                <div className="flex items-center gap-1 sm:gap-2 group/tech cursor-pointer">
+                  <SiNodedotjs className="text-lg sm:text-2xl group-hover/tech:text-green-500 transition-colors" />
+                  <span className="font-bold tracking-tight text-xs sm:text-lg">
                     Node
                   </span>
                 </div>
 
-                <div className="flex items-center gap-2 group/tech cursor-pointer">
-                  <SiExpress className="text-2xl transition-colors" />
-                  <span className="font-bold tracking-tight text-lg">
+                <div className="flex items-center gap-1 sm:gap-2 group/tech cursor-pointer">
+                  <SiExpress className="text-lg sm:text-2xl transition-colors" />
+                  <span className="font-bold tracking-tight text-xs sm:text-lg">
                     Express
                   </span>
                 </div>
@@ -132,9 +131,8 @@ const Waitlist = () => {
             </div>
           </div>
 
-          {/* Right Side */}
           <div
-            className="flex-1 flex justify-center lg:justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[60vh] sm:h-[70vh] lg:h-[80vh]"
+            className="hidden lg:flex flex-1 justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[80vh]"
             style={{ maxHeight: '800px' }}
           >
             <div
