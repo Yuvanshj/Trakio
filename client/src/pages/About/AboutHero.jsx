@@ -39,9 +39,9 @@ export default function AboutHero() {
 
     <section className="hero relative flex flex-col items-center justify-center overflow-x-hidden bg-[#f5f5f5] pt-28 pb-32 md:pt-40 md:pb-80">
 
-      <h1 className="bg-text absolute top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[42px] sm:text-[90px] md:text-[180px] lg:text-[270px] scale-x-120 text-center">THE TRAKIO</h1>
+      <h1 className="hidden sm:block bg-text absolute top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[42px] sm:text-[90px] md:text-[180px] lg:text-[270px] scale-x-120 text-center">THE TRAKIO</h1>
 
-      <h1 className="bg-text absolute top-[250px] sm:top-[320px] md:top-[400px] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[38px] sm:text-[80px] md:text-[150px] lg:text-[210px] scale-x-120 text-center">TRACKING APP</h1>
+      <h1 className="hidden sm:block bg-text absolute top-[250px] sm:top-[320px] md:top-[400px] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-black/5 select-none z-0 text-[38px] sm:text-[80px] md:text-[150px] lg:text-[210px] scale-x-120 text-center">TRACKING APP</h1>
 
       <div className="hero-content relative z-10 text-center">
 

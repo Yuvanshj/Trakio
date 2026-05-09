@@ -111,11 +111,11 @@ export default function FeedbackSection() {
   return (
     <section className="relative bg-black py-20 md:py-32 overflow-hidden">
 
-        <h1 className="absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[40px] sm:text-[90px] md:text-[180px] lg:text-[270px] scale-x-120 text-center">
+        <h1 className="hidden sm:block absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[40px] sm:text-[90px] md:text-[180px] lg:text-[270px] scale-x-120 text-center">
             THE TRAKIO
         </h1>
 
-        <h1 className="absolute top-[32%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[36px] sm:text-[80px] md:text-[150px] lg:text-[210px] scale-x-120 text-center">
+        <h1 className="hidden sm:block absolute top-[32%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-[0.85] tracking-[-10px] text-white/8 select-none z-0 text-[36px] sm:text-[80px] md:text-[150px] lg:text-[210px] scale-x-120 text-center">
         TRACKING APP
         </h1>
 
