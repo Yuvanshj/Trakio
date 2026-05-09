@@ -73,9 +73,9 @@ const Navbar = () => {
           aria-label="menu"
           className="p-2 rounded-md bg-white/5 text-white"
         >
-          <span className="block w-5 h-[2px] bg-white mb-1" />
-          <span className="block w-5 h-[2px] bg-white mb-1" />
-          <span className="block w-5 h-[2px] bg-white" />
+          <span className="block w-5 h-0.5 bg-white mb-1" />
+          <span className="block w-5 h-0.5 bg-white mb-1" />
+          <span className="block w-5 h-0.5 bg-white" />
         </button>
       </div>
 
