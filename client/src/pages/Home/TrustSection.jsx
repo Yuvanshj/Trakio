@@ -74,25 +74,30 @@ export default function TrustSection() {
 
       <div
         className="
-          max-w-8xl
+          max-w-7xl
           mx-auto
 
           px-6
           md:px-10
 
-          py-24
+          py-16
+          md:py-24
         "
       >
 
         <div
           className="
             flex
-            gap-35
+            flex-col
+            lg:flex-row
+            gap-12
+            md:gap-8
+            lg:gap-16
             mx-auto
           "
         >
 
-          <div className="lg:col-span-1 ml-35">
+          <div className="lg:flex-1">
 
             <p
               className="
@@ -110,18 +115,22 @@ export default function TrustSection() {
 
             <h2
               className="
-                mt-6
+                mt-8
+                md:mt-6
 
                 max-w-[500px]
 
-                text-5xl
+                text-4xl
+                sm:text-5xl
                 md:text-6xl
 
                 font-black
 
                 leading-[1]
 
-                tracking-[-3.5px]
+                tracking-[-0.5px]
+                sm:tracking-[-1.5px]
+                md:tracking-[-3.5px]
 
                 text-white
               "
@@ -133,11 +142,15 @@ export default function TrustSection() {
 
             <p
               className="
-                mt-6
+                mt-8
+                md:mt-6
 
                 text-white/50
 
                 leading-8
+
+                text-sm
+                md:text-base
               "
             >
               Thousands of schools and parents rely on
@@ -148,10 +161,20 @@ export default function TrustSection() {
 
           <div
             className="
-              lg:col-span-4
+              lg:flex-1
               flex
 
-              gap-10
+              flex-nowrap
+              gap-3
+              sm:gap-6
+              md:gap-8
+              lg:gap-10
+
+              justify-center
+              lg:justify-start
+
+              overflow-x-auto
+              md:overflow-visible
             "
           >
 
@@ -168,13 +191,23 @@ export default function TrustSection() {
                     flex-col
                     items-center
                     text-center
+
+                    min-w-[75px]
+                    sm:min-w-[120px]
+                    md:min-w-[140px]
+
+                    flex-shrink-0
                   "
                 >
 
                   <div
                     className="
-                      w-20
-                      h-20
+                      w-10
+                      h-10
+                      sm:w-16
+                      sm:h-16
+                      md:w-20
+                      md:h-20
 
                       rounded-[24px]
 
@@ -187,23 +220,28 @@ export default function TrustSection() {
                       items-center
                       justify-center
 
-                      mb-6
+                      mb-1
+                      sm:mb-4
+                      md:mb-6
 
                       shadow-sm
                     "
                   >
 
                     <Icon
-                      size={36}
+                      size={16}
+                      className="text-black sm:w-5 sm:h-5 md:w-7 md:h-7"
                       strokeWidth={2}
-                      className="text-black"
                     />
 
                   </div>
 
                   <h3
                     className="
-                      text-5xl
+                      text-lg
+                      sm:text-3xl
+                      md:text-4xl
+                      lg:text-5xl
 
                       font-black
 
@@ -217,9 +255,15 @@ export default function TrustSection() {
 
                   <p
                     className="
-                      mt-3
+                      mt-1
+                      sm:mt-2
+                      md:mt-3
 
                       text-white
+
+                      text-[9px]
+                      sm:text-xs
+                      md:text-sm
                     "
                   >
                     {item.label}
@@ -239,8 +283,6 @@ export default function TrustSection() {
 
       <div
         className="
-          border-0
-          border-red-500
           bg-white
         "
       >
@@ -253,12 +295,14 @@ export default function TrustSection() {
             px-6
             md:px-10
 
-            pt-10
-            pb-48
+            pt-8
+            md:pt-10
+            pb-24
+            md:pb-48
           "
         >
 
-          <div className="text-center py-10 px-0">
+          <div className="text-center py-8 md:py-10 px-0">
 
             <p
               className="
@@ -278,7 +322,8 @@ export default function TrustSection() {
               className="
                 mt-5
 
-                text-5xl
+                text-4xl
+                sm:text-5xl
                 md:text-6xl
 
                 font-black
@@ -289,6 +334,7 @@ export default function TrustSection() {
               "
             >
               Simple Steps.
+              <br />
               Complete Safety.
             </h2>
 
@@ -296,14 +342,16 @@ export default function TrustSection() {
 
           <div
             className="
-              mt-20
+              mt-12
+              md:mt-20
 
               grid
               grid-cols-1
-              md:grid-cols-2
+              sm:grid-cols-2
               lg:grid-cols-4
 
-              gap-12
+              gap-8
+              md:gap-12
             "
           >
 
@@ -333,8 +381,10 @@ export default function TrustSection() {
 
                   <div
                     className="
-                      w-24
-                      h-24
+                      w-20
+                      h-20
+                      sm:w-24
+                      sm:h-24
 
                       rounded-[28px]
 
@@ -357,8 +407,7 @@ export default function TrustSection() {
                   >
 
                     <Icon
-                      size={38}
-                      strokeWidth={2}
+                      size={32}
                       className="
                         text-[#111]
 
@@ -366,36 +415,41 @@ export default function TrustSection() {
                         duration-500
 
                         group-hover:scale-110
+
+                        sm:w-9
+                        sm:h-9
                       "
+                      strokeWidth={2}
                     />
 
                   </div>
 
-                  <div className="mt-8">
+                  <div className="mt-6 sm:mt-8">
 
-                    <div className="flex items-center gap-3 text-center justify-center">
+                    <h3
+                      className="
+                        text-xl
+                        sm:text-2xl
 
-                      <h3
-                        className="
-                          text-2xl
+                        font-bold
 
-                          font-bold
-
-                          text-[#111]
-                        "
-                      >
-                        {step.title}
-                      </h3>
-
-                    </div>
+                        text-[#111]
+                      "
+                    >
+                      {step.title}
+                    </h3>
 
                     <p
                       className="
-                        mt-5
+                        mt-4
+                        sm:mt-5
 
                         text-black/50
 
                         leading-8
+
+                        text-sm
+                        sm:text-base
                       "
                     >
                       {step.desc}

@@ -103,7 +103,7 @@ export default function HeroSection() {
 
 
       {/* Bus and Floating Cards Section */}
-      <div className="relative -mt-12 sm:-mt-16 md:-mt-24 lg:-mt-50 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[320px] sm:min-h-[420px] md:min-h-[500px] z-20">
+      <div className="relative -mt-30 sm:-mt-30 md:-mt-24 lg:-mt-50 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[320px] sm:min-h-[420px] md:min-h-[500px] z-20">
         
         {/* Floating Notification 1 - Arriving */}
         <div className="absolute top-[40%] left-[2%] md:left-[5%] lg:left-[15%] z-30 hidden sm:flex transform -translate-y-1/2 items-center gap-3 rounded-2xl bg-white/70 backdrop-blur-md px-4 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-black/5 transition-transform duration-500 hover:scale-105">
