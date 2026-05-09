@@ -62,7 +62,7 @@ const handleGoogleLogin = async () => {
   navigate("/track");
 };
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black text-white font-sans relative overflow-hidden">      
+    <div className="flex min-h-screen items-start sm:items-center justify-center bg-black text-white font-sans relative overflow-hidden">      
       {/* Animated Gradient Orbs */}
       <div className="absolute top-1/4 -left-[30%] w-[50vw] h-[50vw] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }} />
       <div className="absolute top-1/3 -right-[35%] w-[60vw] h-[60vw] bg-blue-600/15 rounded-full mix-blend-screen filter blur-[150px] opacity-25 animate-pulse pointer-events-none" style={{ animationDuration: '7s' }} />
@@ -72,11 +72,11 @@ const handleGoogleLogin = async () => {
         <h1 className="whitespace-nowrap font-bold leading-[0.85] tracking-[-8px] text-white/5 text-[100px] sm:text-[160px] md:text-[240px] lg:text-[320px] text-center">TRAKIO</h1>
       </div>
 
-      <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white/10 p-10 shadow-2xl border border-white/20 backdrop-blur-xl">
+      <div className="relative z-10 w-full h-screen sm:h-auto max-w-lg sm:max-w-lg px-4 sm:px-0 rounded-none sm:rounded-2xl bg-white/10 p-6 sm:p-10 shadow-2xl border border-white/20 backdrop-blur-xl flex flex-col">
         
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-200 transition-all duration-300 mb-4 group"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-200 transition-all duration-300 mb-4 group sm:px-6"
         >
           <Home
             size={18}
@@ -97,7 +97,7 @@ const handleGoogleLogin = async () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col mt-7">
+        <form onSubmit={handleSubmit} className="flex flex-col mt-7 sm:px-6">
           <label htmlFor="email" className="mb-2 text-sm font-medium text-gray-300">
             Email
           </label>
@@ -148,7 +148,7 @@ const handleGoogleLogin = async () => {
           <span className="mx-3 text-xs text-white/30">Or continue with</span>
           <div className="grow border-t border-white/10" />
         </div>
-<div className="mt-4">
+<div className="mt-4 sm:px-6">
   <button
     onClick={handleGoogleLogin}
     className="w-full flex items-center justify-center gap-3 h-12 rounded-xl border border-white/10 
