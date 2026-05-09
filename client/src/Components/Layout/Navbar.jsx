@@ -7,6 +7,7 @@ import profileIcon from "../../Assets/Images/icons/profileIcon.png";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
 
@@ -45,7 +46,7 @@ const Navbar = () => {
         </p>
       </div>
 
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 flex items-center justify-center">
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 hidden md:flex items-center justify-center">
         <div className="bg-zinc-900 rounded-full px-6 py-1.5 flex items-center gap-4 shadow-md backdrop-blur-lg border border-white/20">
           <Link to="/" className="px-4 md:px-5 py-1.5 rounded-full text-white hover:bg-white/15 transition-colors text-sm">
             Home
@@ -65,7 +66,48 @@ const Navbar = () => {
       </div>
 
       
-      <div className="flex items-center gap-4">
+      {/* Mobile hamburger */}
+      <div className="md:hidden mr-2">
+        <button
+          onClick={() => setMenuOpen((s) => !s)}
+          aria-label="menu"
+          className="p-2 rounded-md bg-white/5 text-white"
+        >
+          <span className="block w-5 h-[2px] bg-white mb-1" />
+          <span className="block w-5 h-[2px] bg-white mb-1" />
+          <span className="block w-5 h-[2px] bg-white" />
+        </button>
+      </div>
+
+      {menuOpen && (
+        <div className="fixed top-16 right-4 z-50 w-52 max-w-[80vw] rounded-lg bg-black/90 text-white p-3 shadow-2xl border border-white/10 backdrop-blur-md md:hidden">
+          <nav className="flex flex-col gap-2">
+            <Link to="/" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">Home</Link>
+            <Link to="/track" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">Track</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">About</Link>
+            <Link to="/waitlist" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">Waitlist</Link>
+            <div className="border-t border-white/10 my-2" />
+            {user ? (
+              <>
+                <Link to="/profile" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">Profile</Link>
+                <button
+                  onClick={async () => { await supabase.auth.signOut(); setUser(null); window.location = '/login'; }}
+                  className="text-left w-full px-3 py-2 rounded hover:bg-white/5"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/signup" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded bg-white text-black text-center">Get Started</Link>
+                <Link to="/login" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">Login</Link>
+              </>
+            )}
+          </nav>
+        </div>
+      )}
+
+      <div className="hidden md:flex items-center gap-4">
         {user ? (
           <>
             <Link to="/profile" className="inline-flex items-center">
