@@ -47,13 +47,16 @@ export default function HeroSection() {
 
               leading-[1.05]
 
-              tracking-[-5px]
+              
 
               text-[#111]
 
-              text-[60px]
-              sm:text-[80px]
-              md:text-[110px]
+              text-4xl
+              sm:text-5xl
+              md:text-6xl
+              lg:text-[70px]
+              xl:text-[100px]
+              whitespace-normal
             "
           >
             Track Every Ride.
@@ -79,7 +82,7 @@ export default function HeroSection() {
             Complete transport management for schools.
           </p>
 
-          <div className="relative z-30 mt-10 mb-[-4rem] flex flex-wrap justify-center gap-4 px-4">
+          <div className="relative z-30 mt-10 mb-6 sm:mb-[-2rem] flex flex-wrap justify-center gap-4 px-4">
             <button
               className="rounded-2xl bg-black px-8 py-4 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105"
             >
@@ -100,7 +103,7 @@ export default function HeroSection() {
 
 
       {/* Bus and Floating Cards Section */}
-      <div className="relative -mt-44 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[500px] z-20">
+      <div className="relative -mt-30 sm:-mt-30 md:-mt-24 lg:-mt-50 w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 min-h-[320px] sm:min-h-[420px] md:min-h-[500px] z-20">
         
         {/* Floating Notification 1 - Arriving */}
         <div className="absolute top-[40%] left-[2%] md:left-[5%] lg:left-[15%] z-30 hidden sm:flex transform -translate-y-1/2 items-center gap-3 rounded-2xl bg-white/70 backdrop-blur-md px-4 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-black/5 transition-transform duration-500 hover:scale-105">

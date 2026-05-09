@@ -13,10 +13,10 @@ export default function AdminDashboardSection() {
     
           mx-auto
 
-          px-6
+          px-4 sm:px-6
           md:px-10
 
-          py-32
+          py-8 sm:py-16 md:py-32
         "
       >
 
@@ -28,7 +28,7 @@ export default function AdminDashboardSection() {
 
             items-center
 
-            gap-20
+            gap-8 sm:gap-12 md:gap-20
           "
         >
 
@@ -53,17 +53,17 @@ export default function AdminDashboardSection() {
 
             <h2
               className="
-                mt-6    
-                mr-10
+                mt-4 sm:mt-6    
+                mr-0 sm:mr-10
 
-                text-5xl
+                text-3xl sm:text-5xl
                 md:text-7xl
 
                 font-black
 
                 leading-[0.95]
 
-                tracking-[-4px]
+                tracking-[-1px] sm:tracking-[-2px] md:tracking-[-3px] lg:tracking-[-4px]
 
                 text-white
               "
@@ -75,13 +75,13 @@ export default function AdminDashboardSection() {
 
             <p
               className="
-                mt-10
+                mt-4 sm:mt-10
 
                 max-w-xl
 
-                text-lg
+                text-sm sm:text-base md:text-lg
 
-                leading-9
+                leading-7 sm:leading-9
 
                 text-white
               "
