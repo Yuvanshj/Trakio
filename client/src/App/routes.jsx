@@ -14,10 +14,10 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+      <Route path="/" element={<Home />} />
       <Route path="/track" element={<ProtectedRoute><Track /></ProtectedRoute>} />
-      <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-      <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+      <Route path="/about" element={<About />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/waitlist" element={<ProtectedRoute><Waitlist /></ProtectedRoute>} />
     </Routes>
   );
