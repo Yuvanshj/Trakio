@@ -10,9 +10,7 @@
 .marquee-content {
   display: flex;
   gap: 24px;
-
   width: max-content;
-
   animation: scroll 70s linear infinite;
 }
 

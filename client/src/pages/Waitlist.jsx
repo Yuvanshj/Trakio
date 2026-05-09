@@ -34,7 +34,7 @@ const Waitlist = () => {
       </div>
 
       <div className="h-full w-full max-w-screen-2xl mx-auto px-6 lg:px-12 xl:px-16 flex flex-col justify-start relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full pt-10 lg:pt-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-12 w-full pt-4 sm:pt-6 md:pt-8 lg:pt-10 lg:pt-12">
           
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-2xl">
             <div className="mb-3 relative group inline-block">
@@ -62,7 +62,7 @@ const Waitlist = () => {
               />
             </h1>
 
-            <p className="text-gray-300 text-lg sm:text-2xl max-w-lg mb-8 font-medium leading-relaxed">
+            <p className="text-gray-300 text-lg sm:text-2xl max-w-lg mb-8 font-medium leading-relaxed sm:leading-[1.8] md:leading-[2.0]">
               Receive all the latest news and updates, as well as early access
               to the Trakio beta.
             </p>
@@ -132,8 +132,8 @@ const Waitlist = () => {
           </div>
 
           <div
-            className="hidden lg:flex flex-1 justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[80vh]"
-            style={{ maxHeight: '800px' }}
+            className="hidden md:flex flex-1 justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[60vh] md:h-[75vh] lg:h-[85vh]"
+            style={{ maxHeight: '100%' }}
           >
             <div
               className="relative h-full group hover:-translate-y-4 transition-transform duration-700 ease-out"

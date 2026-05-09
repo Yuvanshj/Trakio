@@ -322,13 +322,13 @@ export default function TrustSection() {
               className="
                 mt-5
 
-                text-4xl
-                sm:text-5xl
-                md:text-6xl
+                text-3xl sm:text-4xl
+                md:text-5xl
+                lg:text-6xl
 
                 font-black
 
-                tracking-[-3px]
+                tracking-[-1px] sm:tracking-[-2px] md:tracking-[-3px]
 
                 text-[#111]
               "

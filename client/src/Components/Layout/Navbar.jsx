@@ -1,28 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { supabase } from "../../lib/supabase";
+import { useState } from "react";
 import trakioLogo from "../../Assets/Images/icons/TrakioLogo.png";
 import trakioLogoWhite from "../../Assets/Images/icons/TrakioLogoWhite.png";
 import profileIcon from "../../Assets/Images/icons/profileIcon.png";
-
+import { supabase } from "../../lib/supabase";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/useAuth";
 const Navbar = () => {
-  const [user, setUser] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
-
-  useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user);
-    });
-    const { data: listener } = supabase.auth.onAuthStateChange((_, session) => {
-      setUser(session ? session.user : null);
-    });
-
-    return () => {
-      listener.subscription.unsubscribe();
-    };
-  }, []);
+  const { user } = useAuth();
+ const navigate = useNavigate();
 
   return (
     <nav
@@ -71,11 +60,11 @@ const Navbar = () => {
         <button
           onClick={() => setMenuOpen((s) => !s)}
           aria-label="menu"
-          className="p-2 rounded-md bg-white/5 text-white"
+          className={`p-2 rounded-md ${isAboutPage ? "bg-gray-300/50 text-black" : "bg-white/5 text-white"}`}
         >
-          <span className="block w-5 h-0.5 bg-white mb-1" />
-          <span className="block w-5 h-0.5 bg-white mb-1" />
-          <span className="block w-5 h-0.5 bg-white" />
+          <span className={`block w-5 h-0.5 ${isAboutPage ? "bg-black" : "bg-white"} mb-1`} />
+          <span className={`block w-5 h-0.5 ${isAboutPage ? "bg-black" : "bg-white"} mb-1`} />
+          <span className={`block w-5 h-0.5 ${isAboutPage ? "bg-black" : "bg-white"}`} />
         </button>
       </div>
 
@@ -91,7 +80,7 @@ const Navbar = () => {
               <>
                 <Link to="/profile" onClick={() => setMenuOpen(false)} className="px-3 py-2 rounded hover:bg-white/5">Profile</Link>
                 <button
-                  onClick={async () => { await supabase.auth.signOut(); setUser(null); window.location = '/login'; }}
+                  onClick={async () => { await supabase.auth.signOut();   navigate("/login"); window.location = '/login'; }}
                   className="text-left w-full px-3 py-2 rounded hover:bg-white/5"
                 >
                   Logout
