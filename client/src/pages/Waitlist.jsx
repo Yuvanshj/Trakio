@@ -132,8 +132,8 @@ const Waitlist = () => {
           </div>
 
           <div
-            className="hidden md:flex flex-1 justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[50vh] md:h-[60vh] lg:h-[80vh]"
-            style={{ maxHeight: '800px' }}
+            className="hidden md:flex flex-1 justify-end lg:pr-10 w-full lg:w-auto perspective-[2000px] h-[60vh] md:h-[75vh] lg:h-[85vh]"
+            style={{ maxHeight: '100%' }}
           >
             <div
               className="relative h-full group hover:-translate-y-4 transition-transform duration-700 ease-out"
