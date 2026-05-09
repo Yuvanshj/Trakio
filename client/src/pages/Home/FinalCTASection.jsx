@@ -1,4 +1,4 @@
-import childImage from "../../Assets/Images/child.png";
+import childImage from "../../assets/Images/child.png"
 export default function FinalCTASection() {
 
   return (
