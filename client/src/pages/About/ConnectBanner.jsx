@@ -22,13 +22,15 @@ export default function ConnectBanner() {
 
       <ScrollVelocity
         texts={[marqueeText]}
-        velocity={80}
+        velocity={50}
         numCopies={4}
         className="
           uppercase
-          tracking-[4px]
-          text-xl
-          md:text-3xl
+          tracking-[2px] sm:tracking-[3px] md:tracking-[4px]
+          text-sm
+sm:text-lg
+md:text-2xl
+lg:text-3xl
           font-bold
           text-white
         "
