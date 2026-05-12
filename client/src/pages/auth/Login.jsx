@@ -63,7 +63,6 @@ const handleGoogleLogin = async () => {
 };
   return (
     <div className="flex min-h-screen items-start sm:items-center justify-center bg-black text-white font-sans relative overflow-hidden">      
-      {/* Animated Gradient Orbs */}
       <div className="absolute top-1/4 -left-[30%] w-[50vw] h-[50vw] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }} />
       <div className="absolute top-1/3 -right-[35%] w-[60vw] h-[60vw] bg-blue-600/15 rounded-full mix-blend-screen filter blur-[150px] opacity-25 animate-pulse pointer-events-none" style={{ animationDuration: '7s' }} />
       <div className="absolute -bottom-[30%] left-1/2 w-[70vw] h-[70vw] bg-indigo-600/10 rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-pulse pointer-events-none" style={{ animationDuration: '5s' }} />
