@@ -6,7 +6,7 @@ import Profile from "../pages/Profile/Profile";
 import Login from "../pages/auth/Login";
 import Signup from "../pages/auth/Signup";
 import Waitlist from "../pages/Waitlist";
-import { ProtectedRoute } from "../components/ProtectedRoute";
+import { ProtectedRoute } from "../Components/ProtectedRoute";
 
 const AppRoutes = () => {
   return (
