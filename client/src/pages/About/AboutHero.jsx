@@ -14,7 +14,7 @@ export default function AboutHero() {
     {
       id: 1,
       name: "Yashaswi Gusain",
-      role: "UI/UX Learner",
+      role: "UI/UX Lead",
       image: Yash,
       about: "Passionate about crafting immersive frontend experiences and modern UI systems.",
     },
