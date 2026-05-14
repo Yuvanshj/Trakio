@@ -11,11 +11,11 @@ const Navbar = () => {
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
   const { user } = useAuth();
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <nav
-      className={`w-full h-17 px-6 flex items-center justify-between border-b z-50 relative ${
+      className={`w-full h-17 px-6 flex items-center justify-between z-50 relative ${
         isAboutPage 
           ? "bg-[#f5f5f5]/70 backdrop-blur-md border-gray-300/50 text-black" 
           : "bg-[#020202]/98 backdrop-blur-md border-white/5 text-white"
