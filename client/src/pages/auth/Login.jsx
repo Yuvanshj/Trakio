@@ -27,9 +27,9 @@ const handleGoogleLogin = async () => {
   let isValid = true;
 
   const normalizedEmail = email.trim().toLowerCase();
-  const allowedDomains = ["@nst.rishihood.edu.in", "@gmail.com"];
-  if (!allowedDomains.some((d) => normalizedEmail.endsWith(d))) {
-    setEmailError("Only official college emails or Gmail allowed");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(normalizedEmail)) {
+    setEmailError("Enter a valid email address");
     isValid = false;
   }
 

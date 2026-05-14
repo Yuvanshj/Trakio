@@ -33,12 +33,9 @@ export default function Signup() {
     isValid = false;
   }
 
-  if (
-    !email.endsWith("@nst.rishihood.edu.in")
-  ) {
-    setEmailError(
-      "Only official college emails allowed"
-    );
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.trim())) {
+    setEmailError("Enter a valid email address");
     isValid = false;
   }
 
