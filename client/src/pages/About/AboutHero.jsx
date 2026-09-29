@@ -14,14 +14,14 @@ export default function AboutHero() {
     {
       id: 1,
       name: "Yashaswi Gusain",
-      role: "LODU",
+      role: "Team Lead",
       image: Yash,
       about: "Passionate about crafting immersive frontend experiences and modern UI systems.",
     },
     {
       id: 2,
       name: "Shresth Juyal",
-      role: "Full Stack Developer",
+      role: "Tatta",
       image: Alien,
       about: "Focused on scalable backend architecture, APIs, and performance optimization.",
     },
